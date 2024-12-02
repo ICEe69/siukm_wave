@@ -21,8 +21,8 @@ class Profile extends CI_Controller{
         $data = array(
             'id' => $data->id,
             'username' => $data->username,
-            'email' => $data->email,
-            'level' => $data->level
+            'nama_anggota' => $data->nama_anggota,
+            'photo' => $data->photo,
         );
         $this->load->view('templates_strator/header');
         $this->load->view('templates_admin/sidebar',$data);

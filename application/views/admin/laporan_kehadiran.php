@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style="margin-bottom: 100px;">
 
     <div class="card mx-auto" style="width: 65%;">
         <div class="card-header bg-primary text-white text-center">

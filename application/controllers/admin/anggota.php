@@ -2,6 +2,15 @@
 
 class Anggota extends CI_Controller{
 
+    public function __construct()
+    {
+        parent::__construct();
+        
+        // Cek apakah user sudah login
+        if (!$this->session->userdata('logged_in')) {
+            redirect('welcome');
+        }
+    }
     public function index()
     {
         $data = $this->user_model->ambil_data($this->session->userdata['username']);
@@ -9,6 +18,8 @@ class Anggota extends CI_Controller{
 
         $data = array(
             'username' => $data->username,
+            'nama_anggota' => $data->nama_anggota,
+            'photo' => $data->photo,
             'hak_akses' => $data->hak_akses,
             'anggota' => $this->anggota_model->tampil_data()->result()
         );

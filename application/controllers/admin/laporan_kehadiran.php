@@ -21,6 +21,8 @@ class Laporan_kehadiran extends CI_Controller{
 
         $data = array(
             'username' => $data->username,
+            'nama_anggota' => $data->nama_anggota,
+            'photo' => $data->photo,
             'hak_akses' => $data->hak_akses,
         );
         $this->load->view('templates_admin/header');

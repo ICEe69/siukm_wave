@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style="margin-bottom: 100px;">
 
     <div class="alert alert-success" role="alert">
        <i class="fas fa-fw fa-tachometer-alt"></i> Keuangan

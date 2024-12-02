@@ -23,6 +23,8 @@ class Dashboard extends CI_Controller {
 
             $data = array(
                 'username' => $data->username,
+                'nama_anggota' => $data->nama_anggota,
+                'photo' => $data->photo,
                 'hak_akses' => $hak_akses,
                 'anggota' => count($this->anggota_model->tampil_data()->result()), // Menghitung jumlah anggota
                 'kegiatan' => count($this->kegiatan_model->tampil_data()->result()), // Menghitung jumlah kegiatan
