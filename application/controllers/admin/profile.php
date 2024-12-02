@@ -9,7 +9,7 @@ class Profile extends CI_Controller{
                     Anda Belum Login!
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>');
-            redirect('strator/auth');
+            redirect('welcome');
         }
     }
     public function index()
