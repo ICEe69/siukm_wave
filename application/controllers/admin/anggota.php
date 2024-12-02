@@ -37,6 +37,8 @@ class Anggota extends CI_Controller{
 
         $data = array(
             'username' => $data->username,
+            'nama_anggota' => $data->nama_anggota,
+            'photo' => $data->photo,
             'id_anggota'=> set_value('id_anggota'),
             'nim'=> set_value('nim'),
             'nama_anggota'=> set_value('nama_anggota'),
@@ -131,6 +133,8 @@ class Anggota extends CI_Controller{
         $data = $this->user_model->ambil_data($this->session->userdata['username']);
 
         $data = array(
+            'nama_anggota' => $data->nama_anggota,
+            'photo' => $data->photo,
             'username' => $data->username,
         );
         $where = array('id_anggota' => $id);
@@ -154,7 +158,18 @@ class Anggota extends CI_Controller{
         $status = $this->input->post('status');
         $hak_akses = $this->input->post('hak_akses');
         $username = $this->input->post('username');
-        $password = md5($this->input->post('password'));
+        
+        $existing_data = $this->anggota_model->edit_data(['id_anggota' => $id], 'anggota')->row();
+
+        
+        $password_input = $this->input->post('password');
+        if (!empty($password_input)) {
+            
+            $password = md5($password_input);
+        } else {
+           
+            $password = $existing_data->password;
+        }
 
 
         // Ambil foto baru jika ada
@@ -186,7 +201,6 @@ class Anggota extends CI_Controller{
             'status' => $status,
             'hak_akses' => $hak_akses,
             'username' => $username,
-            'password' => $password,
             'photo' => $photo  // Menyimpan nama file foto
         );
 
