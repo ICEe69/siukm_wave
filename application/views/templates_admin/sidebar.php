@@ -71,8 +71,6 @@
                         <h6 class="collapse-header">Sub-Menu Laporan :</h6>
                         <a class="collapse-item" href="<?php echo base_url('admin/laporan_kehadiran') ?>">Laporan Absensi</a>
                         <a class="collapse-item" href="utilities1-border.html">Laporan Kegiatan</a>
-                        <a class="collapse-item" href="utilities-border.html">Laporan Keuangan</a>
-                        <a class="collapse-item" href="utilities-border.html">Sertfikat</a>
                     </div>
                 </div>
             </li>
@@ -104,7 +102,7 @@
 
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/auth/logout') ?>">
+                <a class="nav-link" href="<?php echo base_url('welcome/logout') ?>">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>
