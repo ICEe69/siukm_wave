@@ -95,7 +95,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/auth/logout') ?>">
+                <a class="nav-link" href="<?php echo base_url('ubah_password') ?>">
                     <i class="fas fa-lock"></i>
                     <span>Ubah Password</span></a>
             </li>

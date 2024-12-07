@@ -27,6 +27,7 @@ class Welcome extends CI_Controller {
                 $session_data = array(
                     'username'   => $cek->username,
                     'hak_akses'  => $cek->hak_akses,
+                    'id_anggota' => $cek->id_anggota,
                     'logged_in'  => TRUE
                 );
                 $this->session->set_userdata($session_data);
