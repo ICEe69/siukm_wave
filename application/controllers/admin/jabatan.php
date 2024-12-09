@@ -73,6 +73,16 @@ class Jabatan extends CI_Controller{
 
     public function update($id)
     {
+        $data = $this->user_model->ambil_data($this->session->userdata['username']);
+        
+
+        $data = array(
+            'username' => $data->username,
+            'nama_anggota' => $data->nama_anggota,
+            'photo' => $data->photo,
+            'hak_akses' => $data->hak_akses,
+            'jabatan' => $this->jabatan_model->tampil_data()->result()
+        );
         $where = array('id_jabatan' => $id);
         $data['jabatan'] = $this->jabatan_model->edit_data($where,'jabatan')->result(); 
 
@@ -80,6 +90,8 @@ class Jabatan extends CI_Controller{
         $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/jabatan_update',$data);
         $this->load->view('templates_admin/footer');
+        
+
     }
 
     public function update_aksi()
