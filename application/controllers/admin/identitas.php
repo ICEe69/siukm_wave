@@ -1,6 +1,6 @@
 <?php
 
-class Anggota extends CI_Controller{
+class Identitas extends CI_Controller{
 
     function __construct() {
         parent::__construct();
@@ -25,9 +25,10 @@ class Anggota extends CI_Controller{
             'hak_akses' => $data->hak_akses,
             'anggota' => $this->anggota_model->tampil_data()->result()
         );
+        $data['identitas'] = $this->identitas_model->tampil_data('identitas')->result();
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar',$data);
-        $this->load->view('admin/anggota',$data);
+        $this->load->view('admin/identitas',$data);
         $this->load->view('templates_admin/footer');
     }
 

@@ -19,7 +19,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('admin/dashboard')?>">
+                <a class="nav-link" href="<?php echo base_url('anggota/dashboard')?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -34,8 +34,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sub-Menu Wave:</h6>
-                        <a class="collapse-item" href="<?php echo base_url('admin/anggota')?>">Data Anggota</a>
-                        <a class="collapse-item" href="<?php echo base_url('admin/jabatan')?>">Data Jabatan</a>
+                        <a class="collapse-item" href="<?php echo base_url('anggota/anggota')?>">Data Anggota</a>
+                        <a class="collapse-item" href="<?php echo base_url('anggota/jabatan')?>">Data Jabatan</a>
                     </div>
                 </div>
             </li>
@@ -51,26 +51,9 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sub-Menu Event :</h6>
-                        <a class="collapse-item" href="<?php echo base_url('admin/kehadiran') ?>">Data Absensi</a>
-                        <a class="collapse-item" href="<?php echo base_url('admin/kegiatan') ?>">Data Kegiatan</a>
-                        <a class="collapse-item" href="<?php echo base_url('admin/keuangan') ?>">Data Keuangan</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities1"
-                    aria-expanded="true" aria-controls="collapseUtilities1">
-                    <i class="fas fa-fw fa-file"></i>
-                    <span>Laporan</span>
-                </a>
-                <div id="collapseUtilities1" class="collapse" aria-labelledby="headingUtilities1"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sub-Menu Laporan :</h6>
-                        <a class="collapse-item" href="<?php echo base_url('admin/laporan_kehadiran') ?>">Laporan Absensi</a>
-                        <a class="collapse-item" href="utilities1-border.html">Laporan Kegiatan</a>
+                        <a class="collapse-item" href="<?php echo base_url('anggota/kehadiran') ?>">Data Absensi</a>
+                        <a class="collapse-item" href="<?php echo base_url('anggota/kegiatan') ?>">Data Kegiatan</a>
+                        <a class="collapse-item" href="<?php echo base_url('anggota/keuangan') ?>">Data Keuangan</a>
                     </div>
                 </div>
             </li>
@@ -85,7 +68,6 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sub-Menu Info UKM:</h6>
-                        <a class="collapse-item" href="<?php echo base_url('admin/identitas') ?>">Identitas</a>
                         <a class="collapse-item" href="forgot-password.html">Informasi UKM</a>
                         <a class="collapse-item" href="404.html">Tentang Kampus</a>
                         <a class="collapse-item" href="404.html">Materi Kegiatan UKM</a>
@@ -121,7 +103,7 @@
             <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="<?php echo base_url('assets/img/undraw_rocket.svg') ?>" alt="...">
                 <p class="text-center mb-2"><strong></strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-anggota-pro">Upgrade to Pro!</a>
             </div>
 
         </ul>

@@ -4,7 +4,7 @@ class Dashboard extends CI_Controller {
     function __construct() {
         parent::__construct();
 
-        if (!isset($this->session->userdata['username'])) {
+        if ($this->session->userdata('hak_akses') !='2') {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                     Anda Belum Login!
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -25,18 +25,16 @@ class Dashboard extends CI_Controller {
                 'username' => $data->username,
                 'nama_anggota' => $data->nama_anggota,
                 'photo' => $data->photo,
-                'hak_akses' => $hak_akses,
-                'anggota' => count($this->anggota_model->tampil_data()->result()), // Menghitung jumlah anggota
-                'kegiatan' => count($this->kegiatan_model->tampil_data()->result()), // Menghitung jumlah kegiatan
-                'kehadiran' => count($this->kehadiran_model->tampil_data()->result()) // Menghitung jumlah kehadiran
+                'hak_akses' => $hak_akses
             );
 
             // Memuat tampilan
-            $this->load->view('templates_admin/header');
-            $this->load->view('templates_admin/sidebar', $data);
-            $this->load->view('admin/dashboard', $data);
-            $this->load->view('admin/profile');
-            $this->load->view('templates_admin/footer');
+            $id = $this->session->userdata('id_anggota');
+            $data['anggota'] = $this->db->query("SELECT * FROM anggota WHERE id_anggota='$id'")->result();
+            $this->load->view('templates_anggota/header');
+            $this->load->view('templates_anggota/sidebar', $data);
+            $this->load->view('anggota/dashboard', $data);
+            $this->load->view('templates_anggota/footer');
         } else {
             // Jika data pengguna tidak ditemukan, redirect ke halaman login
             redirect('welcome');

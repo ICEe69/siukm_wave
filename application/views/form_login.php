@@ -215,14 +215,17 @@
         <!-- Right Section -->
         <div class="login-right">
             <h2>Sign In</h2>
+            <?php echo $this->session->flashdata('pesan') ?>
             <form method="POST" action="#">
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" id="username" placeholder="Enter your username" name="username" required>
+                    <?php echo form_error('username','<div class="text-small text-danger"</div>') ?>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password" required>
+                    <?php echo form_error('password','<div class="text-small text-danger"</div>') ?>
                 </div>
                 <button type="submit" class="btn btn-login">Log in now</button>
             </form>
