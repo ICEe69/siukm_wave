@@ -34,10 +34,10 @@ class Kehadiran extends CI_Controller{
         }
 
         $data = array(
-            'username' => $data->username,
-            'nama_anggota' => $data->nama_anggota,
-            'photo' => $data->photo,
-            'hak_akses' => $data->hak_akses,
+            'username'      => $data->username,
+            'nama_anggota'  => $data->nama_anggota,
+            'photo'         => $data->photo,
+            'hak_akses'     => $data->hak_akses,
         );
 
         $data['kehadiran'] = $this->db->query("SELECT kehadiran.*, anggota.nama_anggota, anggota.jenis_kelamin, anggota.nama_jabatan 
@@ -55,7 +55,6 @@ class Kehadiran extends CI_Controller{
 
     public function input()
     {
-        // Cek apakah data dikirim dengan submit
         if ($this->input->post('submit', TRUE) == 'submit') {
 
             $post = $this->input->post();
@@ -74,6 +73,7 @@ class Kehadiran extends CI_Controller{
                     );
                 }
             }
+            
 
             $this->kehadiran_model->insert_batch('kehadiran', $simpan);
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -84,6 +84,7 @@ class Kehadiran extends CI_Controller{
         }
 
         // Ambil data jabatan
+        
         $data['jabatan'] = $this->kehadiran_model->tampil_data('jabatan')->result();
 
         if ((isset($_GET['tanggal']) && $_GET['tanggal'] != '') && 
@@ -103,7 +104,11 @@ class Kehadiran extends CI_Controller{
         $user_data = $this->user_model->ambil_data($this->session->userdata('username'));
 
         $data = array(
-            'username'       => $user_data->username,
+            'username' => $user_data->username,
+            'nama_anggota' => $user_data->nama_anggota,
+            'photo' => $user_data->photo,
+            'hak_akses' => $user_data->hak_akses,
+
             'id_kehadiran'   => set_value('id_kehadiran'),
             'nim'            => set_value('nim'),
             'nama_anggota'   => set_value('nama_anggota'),
@@ -144,7 +149,7 @@ class Kehadiran extends CI_Controller{
         }
 
         $data = array(
-            'username' => $user_data->username,
+            'username'  => $user_data->username,
             'hak_akses' => $user_data->hak_akses,
         );
 

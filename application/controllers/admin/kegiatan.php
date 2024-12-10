@@ -36,12 +36,15 @@ class Kegiatan extends CI_Controller{
         
 
         $data = array(
-            'username' => $data->username,
-            'id_kegiatan'=> set_value('id_kegiatan'),
-            'nama_kegiatan'=> set_value('nama_kegiatan'),
-            'penyelenggara'=> set_value('penyelenggara'),
-            'kuota'=> set_value('kuota'),
-            'status'=> set_value('status')
+            'username'          => $data->username,
+            'nama_anggota'      => $data->nama_anggota,
+            'photo'             => $data->photo,
+            'hak_akses'         => $data->hak_akses,
+            'id_kegiatan'       => set_value('id_kegiatan'),
+            'nama_kegiatan'     => set_value('nama_kegiatan'),
+            'penyelenggara'     => set_value('penyelenggara'),
+            'kuota'             => set_value('kuota'),
+            'status'            => set_value('status')
         );
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar',$data);
@@ -57,10 +60,10 @@ class Kegiatan extends CI_Controller{
             $this->input();
         }else{
             $data = array(
-                'nama_kegiatan' => $this->input->post('nama_kegiatan', TRUE),
-                'penyelenggara' => $this->input->post('penyelenggara', TRUE),
-                'kuota' => $this->input->post('kuota', TRUE),
-                'status' => $this->input->post('status', TRUE),
+                'nama_kegiatan'     => $this->input->post('nama_kegiatan', TRUE),
+                'penyelenggara'     => $this->input->post('penyelenggara', TRUE),
+                'kuota'             => $this->input->post('kuota', TRUE),
+                'status'            => $this->input->post('status', TRUE),
             );
 
             $this->kegiatan_model->input_data($data);
@@ -82,6 +85,15 @@ class Kegiatan extends CI_Controller{
 
     public function update($id)
     {
+         $data = $this->user_model->ambil_data($this->session->userdata['username']);
+
+        $data = array(
+            'username'          => $data->username,
+            'hak_akses'         => $data->hak_akses,
+            'nama_anggota'      => $data->nama_anggota,
+            'photo'             => $data->photo,
+            'kegiatan'          => $this->kegiatan_model->tampil_data()->result()
+        );
         $where = array('id_kegiatan' => $id);
         $data['kegiatan'] = $this->kegiatan_model->edit_data($where,'kegiatan')->result(); 
 
@@ -100,10 +112,10 @@ class Kegiatan extends CI_Controller{
         $status = $this->input->post('status');
 
         $data = array(
-            'nama_kegiatan' => $nama_kegiatan,
-            'penyelenggara' => $penyelenggara,
-            'kuota' => $kuota,
-            'status' => $status,
+            'nama_kegiatan'     => $nama_kegiatan,
+            'penyelenggara'     => $penyelenggara,
+            'kuota'             => $kuota,
+            'status'            => $status,
         );
 
         $where = array(

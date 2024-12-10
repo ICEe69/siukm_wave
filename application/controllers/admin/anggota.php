@@ -33,14 +33,12 @@ class Anggota extends CI_Controller{
 
     public function input()
     {
-        $data['jabatan'] = $this->anggota_model->tampil_data('jabatan')->result();
         $data = $this->user_model->ambil_data($this->session->userdata['username']);
-        
 
         $data = array(
-            'username' => $data->username,
             'nama_anggota' => $data->nama_anggota,
             'photo' => $data->photo,
+            'username' => $data->username,
             'id_anggota'=> set_value('id_anggota'),
             'nim'=> set_value('nim'),
             'nama_anggota'=> set_value('nama_anggota'),
@@ -53,7 +51,8 @@ class Anggota extends CI_Controller{
             'username'=> set_value('username'),
             'password'=> set_value('password'),
         );
-        $data['jabatan'] = $this->jabatan_model->tampil_data()->result();
+        $data['jabatan'] = $this->anggota_model->tampil_data('jabatan')->result();
+        $data = $this->user_model->ambil_data($this->session->userdata['username']);
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/anggota_form', $data); // Pastikan nama file view benar
