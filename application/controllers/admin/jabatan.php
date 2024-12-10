@@ -37,6 +37,9 @@ class Jabatan extends CI_Controller{
 
         $data = array(
             'username' => $data->username,
+            'nama_anggota' => $data->nama_anggota,
+            'photo' => $data->photo,
+            'hak_akses' => $data->hak_akses,
             'id_jabatan'=> set_value('id_jabatan'),
             'nama_jabatan'=> set_value('nama_jabatan'),
             'deskripsi'=> set_value('deskripsi'),

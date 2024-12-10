@@ -7,11 +7,6 @@
     <div class="alert alert-success" role="alert">
         <h4 class="alert-heading">Selamat Datang!</h4>
         <p>Selamat Datang <strong><?php echo $username; ?></strong> di Sistem Informasi Unit Kegiatan Mahasiswa Universitas Maritim Raja Ali Haji, Anda Login sebagai <strong><?php echo $hak_akses; ?></strong></p>
-        <hr>
-        <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal">
-        <i class="fas fa-cogs"></i>
-            Control Panel
-        </button>
     </div>
 
     <!-- Button trigger modal -->
@@ -31,7 +26,7 @@
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $anggota ?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            <i class="fas fa-users fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +91,7 @@
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $kehadiran ?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                            <i class="fas fa-chalkboard fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>

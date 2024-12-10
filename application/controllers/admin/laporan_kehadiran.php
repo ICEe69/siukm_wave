@@ -42,5 +42,6 @@ class Laporan_kehadiran extends CI_Controller{
         $this->load->view('admin/laporan_kehadiran',$data);
         $this->load->view('templates_admin/footer');
     }
+    
 
 }

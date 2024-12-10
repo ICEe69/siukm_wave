@@ -101,17 +101,16 @@ class Kehadiran extends CI_Controller{
             $tanggalbulantahun = $tanggal . $bulan . $tahun;
         }
 
-        $user_data = $this->user_model->ambil_data($this->session->userdata('username'));
+        $data = $this->user_model->ambil_data($this->session->userdata('username'));
 
         $data = array(
-            'username' => $user_data->username,
-            'nama_anggota' => $user_data->nama_anggota,
-            'photo' => $user_data->photo,
-            'hak_akses' => $user_data->hak_akses,
+            'username' => $data->username,
+            'nama_anggota' => $data->nama_anggota,
+            'photo' => $data->photo,
+            'hak_akses' => $data->hak_akses,
 
             'id_kehadiran'   => set_value('id_kehadiran'),
             'nim'            => set_value('nim'),
-            'nama_anggota'   => set_value('nama_anggota'),
             'jenis_kelamin'  => set_value('jenis_kelamin'),
             'nama_jabatan'   => set_value('nama_jabatan'),
             'hadir'          => set_value('hadir'),
