@@ -70,12 +70,12 @@
       Selengkapnya...
     </button>
   </div>
-</div><br><br>
+</div>
 
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">TENTANG UKM</h5>
@@ -83,7 +83,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body text-justify">
+      <div class="modal-body text-justify" style="margin: 50px;">
         <center><p><strong class="text-center">SEJARAH UNIT KEGIATAN MAHASISWA</strong></p></center>
         <?php foreach($tentang_ukm as $tu) : ?>
         <?php echo $tu->sejarah ?>
@@ -103,5 +103,64 @@
     </div>
   </div>
 </div>
+
+<div class="card text-center m-5">
+  <div class="card-header">
+    <strong>STRUKTUR JABATAN UKM</strong>
+  </div>
+  <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 2%;">
+    <!-- Card pertama -->
+    <div class="col-2 mb-2">
+      <div class="card">
+        <img src="<?php ?>" class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
+        <div class="card-body">
+          <p class="card-text">Deskripsi singkat card pertama.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card kedua -->
+    <div class="col-2 mb-2">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
+        <div class="card-body">
+          <p class="card-text">Deskripsi singkat card kedua.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card ketiga -->
+    <div class="col-2 mb-2">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
+        <div class="card-body">
+          <p class="card-text">Deskripsi singkat card ketiga.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card keempat -->
+    <div class="col-2 mb-2">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
+        <div class="card-body">
+          <p class="card-text">Deskripsi singkat card keempat.</p>
+        </div>
+      </div>
+    </div>    
+
+    <!-- Card kelima -->
+    <div class="col-2 mb-2">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
+        <div class="card-body">
+          <p class="card-text">Deskripsi singkat card kelima.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+
 
 
