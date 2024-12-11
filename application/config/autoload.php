@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','form','security');
+$autoload['helper'] = array('url','form','security','text');
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('login_model','user_model','anggota_model','jabatan_model','kegiatan_model','kehadiran_model','keuangan_model','identitas_model');
+$autoload['model'] = array('login_model','user_model','anggota_model','jabatan_model','kegiatan_model','kehadiran_model','keuangan_model','identitas_model','tentangukm_model');

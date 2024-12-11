@@ -27,8 +27,7 @@
   </div>
 </nav>
 
-
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel" style=" width: 100%">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -36,22 +35,73 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?php echo base_url('assets/img/slider1.jpg') ?>" class="d-block w-100" alt="...">
+      <img class="d-block w-100" src="<?php echo base_url('assets/img/slider1.jpg') ?>" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo base_url('assets/img/slider2.jpeg') ?>" class="d-block w-100" alt="...">
+      <img class="d-block w-100" src="<?php echo base_url('assets/img/slider2.jpg') ?>" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo base_url('assets/img/slider3.jpg') ?>" class="d-block w-100" alt="...">
+      <img class="d-block w-100" src="<?php echo base_url('assets/img/slider3.jpg') ?>" alt="Third slide">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
-  </button>
+  </a>
 </div>
+
+
+<div class="card text-center m-5">
+  <div class="card-header">
+    <strong>TENTANG UKM</strong>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+    <?php foreach($tentang_ukm as $tu) : ?>
+    <?php echo word_limiter($tu->sejarah,75) ?>
+    <?php endforeach; ?>
+    </p>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Selengkapnya...
+    </button>
+  </div>
+</div><br><br>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">TENTANG UKM</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-justify">
+        <center><p><strong class="text-center">SEJARAH UNIT KEGIATAN MAHASISWA</strong></p></center>
+        <?php foreach($tentang_ukm as $tu) : ?>
+        <?php echo $tu->sejarah ?>
+        <?php endforeach; ?><br><br><hr>
+        <center><p><strong class="text-center">VISI</strong></p></center>
+        <?php foreach($tentang_ukm as $tu) : ?>
+        <?php echo $tu->visi ?>
+        <?php endforeach; ?><br><br><hr>
+        <center><p><strong class="text-center">MISI</strong></p></center>
+        <?php foreach($tentang_ukm as $tu) : ?>
+        <?php echo $tu->misi ?>
+        <?php endforeach; ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 

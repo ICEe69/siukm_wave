@@ -41,14 +41,11 @@ class Anggota extends CI_Controller{
             'username' => $data->username,
             'id_anggota'=> set_value('id_anggota'),
             'nim'=> set_value('nim'),
-            'nama_anggota'=> set_value('nama_anggota'),
             'jenis_kelamin'=> set_value('jenis_kelamin'),
             'nama_jabatan'=> set_value('nama_jabatan'),
             'tanggal_masuk'=> set_value('tanggal_masuk'),
             'status'=> set_value('status'),
-            'photo'=> set_value('photo'),
             'hak_akses'=> set_value('hak_akses'),
-            'username'=> set_value('username'),
             'password'=> set_value('password'),
         );
         $data['jabatan'] = $this->anggota_model->tampil_data('jabatan')->result();
