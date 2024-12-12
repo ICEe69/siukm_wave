@@ -27,35 +27,37 @@
   </div>
 </nav>
 
-<div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel" style=" width: 100%">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="<?php echo base_url('assets/img/slider1.jpg') ?>" alt="First slide">
+<div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
+  <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel" style=" width: 100%">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="<?php echo base_url('assets/img/slider1.jpg') ?>" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="<?php echo base_url('assets/img/slider2.jpg') ?>" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="<?php echo base_url('assets/img/slider3.jpg') ?>" alt="Third slide">
+      </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="<?php echo base_url('assets/img/slider2.jpg') ?>" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="<?php echo base_url('assets/img/slider3.jpg') ?>" alt="Third slide">
-    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
 
 
-<div class="card text-center m-5">
+<div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
   <div class="card-header">
     <strong>TENTANG UKM</strong>
   </div>
@@ -104,58 +106,99 @@
   </div>
 </div>
 
-<div class="card text-center m-5">
+<div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
   <div class="card-header">
     <strong>STRUKTUR JABATAN UKM</strong>
   </div>
   <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 2%;">
+
     <!-- Card pertama -->
     <div class="col-2 mb-2">
       <div class="card">
-        <img src="<?php ?>" class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
-        <div class="card-body">
-          <p class="card-text">Deskripsi singkat card pertama.</p>
-        </div>
+          <img src="<?php echo base_url('assets/photo/' . (isset($ketua->photo) ? htmlspecialchars($ketua->photo) : 'default.jpg')); ?>" 
+              class="card-img-top" 
+              alt="Foto Ketua" 
+              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+          <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                  <?php echo htmlspecialchars($ketua->nama_anggota); ?>
+              </h5>
+              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                  <?php echo htmlspecialchars($ketua->nama_jabatan); ?>
+              </p>
+          </div>
       </div>
     </div>
 
     <!-- Card kedua -->
     <div class="col-2 mb-2">
       <div class="card">
-        <img src="..." class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
-        <div class="card-body">
-          <p class="card-text">Deskripsi singkat card kedua.</p>
-        </div>
+          <img src="<?php echo base_url('assets/photo/' . (isset($wakil_ketua->photo) ? htmlspecialchars($wakil_ketua->photo) : 'default.jpg')); ?>" 
+              class="card-img-top" 
+              alt="Foto Wakil Ketua" 
+              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+          <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                  <?php echo htmlspecialchars($wakil_ketua->nama_anggota); ?>
+              </h5>
+              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                  <?php echo htmlspecialchars($wakil_ketua->nama_jabatan); ?>
+              </p>
+          </div>
       </div>
     </div>
 
     <!-- Card ketiga -->
     <div class="col-2 mb-2">
       <div class="card">
-        <img src="..." class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
-        <div class="card-body">
-          <p class="card-text">Deskripsi singkat card ketiga.</p>
-        </div>
+          <img src="<?php echo base_url('assets/photo/' . (isset($sekretaris->photo) ? htmlspecialchars($sekretaris->photo) : 'default.jpg')); ?>" 
+              class="card-img-top" 
+              alt="Foto Sekretaris" 
+              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+          <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                  <?php echo htmlspecialchars($sekretaris->nama_anggota); ?>
+              </h5>
+              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                  <?php echo htmlspecialchars($sekretaris->nama_jabatan); ?>
+              </p>
+          </div>
       </div>
     </div>
 
     <!-- Card keempat -->
     <div class="col-2 mb-2">
       <div class="card">
-        <img src="..." class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
-        <div class="card-body">
-          <p class="card-text">Deskripsi singkat card keempat.</p>
-        </div>
+          <img src="<?php echo base_url('assets/photo/' . (isset($bendahara->photo) ? htmlspecialchars($bendahara->photo) : 'default.jpg')); ?>" 
+              class="card-img-top" 
+              alt="Foto Bendahara" 
+              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+          <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                  <?php echo htmlspecialchars($bendahara->nama_anggota); ?>
+              </h5>
+              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                  <?php echo htmlspecialchars($bendahara->nama_jabatan); ?>
+              </p>
+          </div>
       </div>
-    </div>    
+    </div> 
 
     <!-- Card kelima -->
     <div class="col-2 mb-2">
       <div class="card">
-        <img src="..." class="card-img-top" alt="..." style="height: auto; max-width: 100%; object-fit: cover;">
-        <div class="card-body">
-          <p class="card-text">Deskripsi singkat card kelima.</p>
-        </div>
+          <img src="<?php echo base_url('assets/photo/' . (isset($humas->photo) ? htmlspecialchars($humas->photo) : 'default.jpg')); ?>" 
+              class="card-img-top" 
+              alt="Foto Humas" 
+              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+          <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                  <?php echo htmlspecialchars($humas->nama_anggota); ?>
+              </h5>
+              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                  <?php echo htmlspecialchars($humas->nama_jabatan); ?>
+              </p>
+          </div>
       </div>
     </div>
   </div>

@@ -34,7 +34,7 @@ class Anggota extends CI_Controller{
     public function input()
     {
         $data = $this->user_model->ambil_data($this->session->userdata['username']);
-
+        
         $data = array(
             'nama_anggota' => $data->nama_anggota,
             'photo' => $data->photo,
@@ -48,8 +48,7 @@ class Anggota extends CI_Controller{
             'hak_akses'=> set_value('hak_akses'),
             'password'=> set_value('password'),
         );
-        $data['jabatan'] = $this->anggota_model->tampil_data('jabatan')->result();
-        $data = $this->user_model->ambil_data($this->session->userdata['username']);
+        $data['jabatan'] = $this->jabatan_model->tampil_data()->result();
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/anggota_form', $data); // Pastikan nama file view benar

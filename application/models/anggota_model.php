@@ -33,5 +33,10 @@ class Anggota_model extends CI_Model{
         $this->db->where('username', $id);
         return $this->db->get('anggota')->row();
     }
-    
+    public function get_jabatan($jabatan)
+    {
+        $this->db->where('nama_jabatan', $jabatan); 
+        $query = $this->db->get('anggota');        
+        return $query->row();                      
+    }
 }
