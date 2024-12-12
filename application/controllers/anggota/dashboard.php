@@ -37,7 +37,7 @@ class Dashboard extends CI_Controller {
             $this->load->view('templates_anggota/footer');
         } else {
             // Jika data pengguna tidak ditemukan, redirect ke halaman login
-            redirect('welcome');
+            redirect('login');
         }
     }
 }

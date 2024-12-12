@@ -1,58 +1,22 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Welcome extends CI_Controller {
+
+class Welcome extends CI_Controller{
 
     public function index()
     {
-        $this->_rules();
+        $data['identitas'] = $this->identitas_model->tampil_data('identitas')->result();
+        $data['tentang_ukm'] = $this->tentangukm_model->tampil_data('tentang_ukm')->result();
+        $data['ketua'] = $this->anggota_model->get_jabatan('Ketua');
+        $data['wakil_ketua'] = $this->anggota_model->get_jabatan('Wakil Ketua');
+        $data['sekretaris'] = $this->anggota_model->get_jabatan('Sekretaris');
+        $data['bendahara'] = $this->anggota_model->get_jabatan('Bendahara');
+        $data['humas'] = $this->anggota_model->get_jabatan('Humas');
 
-        if($this->form_validation->run() == FALSE){
-            $this->load->view('templates_admin/header');
-            $this->load->view('form_login');
-        }else{
-            $username = $this->input->post('username');
-            $password = $this->input->post('password');
-
-            $cek = $this->login_model->cek_login($username, $password);
-
-            if($cek == FALSE)
-            {
-                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    Username atau Password salah!
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>');
-                redirect('welcome');
-            }else{
-                // Set session data
-                $session_data = array(
-                    'username'   => $cek->username,
-                    'hak_akses'  => $cek->hak_akses,
-                    'id_anggota' => $cek->id_anggota,
-                    'logged_in'  => TRUE
-                );
-                $this->session->set_userdata($session_data);
-
-                // Redirect berdasarkan hak akses
-                switch ($cek->hak_akses){
-                    case 1 : redirect('admin/dashboard');
-                             break;
-
-                    case 2 : redirect('anggota/dashboard');
-                             break;
-
-                    default:
-                             break;
-                }
-            }
-        }
+        $this->load->view('templates_admin/header');
+        $this->load->view('landing_page',$data);
+        $this->load->view('templates_admin/footer');
     }
-
-    public function _rules()
-    {
-        $this->form_validation->set_rules('username','username','required');
-        $this->form_validation->set_rules('password','password','required');
-    }
-
     public function logout()
     {
         // Hapus semua session

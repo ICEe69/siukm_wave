@@ -51,7 +51,7 @@ class Ubah_password extends CI_Controller
                         Password berhasil diubah!
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>');
-            redirect('welcome');
+            redirect('login');
         }else{
             if (!$this->session->userdata('username')) {
             redirect('auth'); // Redirect ke halaman login jika session tidak ada
