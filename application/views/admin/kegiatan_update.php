@@ -24,9 +24,9 @@
                 <label>Status</label>
                 <select name="status" class="form-control" required>
                     <option value="" disabled>--Status--</option>
-                    <option value="dt" <?php echo ($kgt->status == 'db') ? 'selected' : ''; ?>>Di Buka</option>
-                    <option value="db" <?php echo ($kgt->status == 'dt') ? 'selected' : ''; ?>>Di Tutup</option>
-                    <option value="s" <?php echo ($kgt->status == 's') ? 'selected' : ''; ?>>Selesai</option>
+                    <option value="dt" <?php echo ($kgt->status == 'dibuka') ? 'selected' : ''; ?>>Di Buka</option>
+                    <option value="db" <?php echo ($kgt->status == 'ditutup') ? 'selected' : ''; ?>>Di Tutup</option>
+                    <option value="s" <?php echo ($kgt->status == 'selesai') ? 'selected' : ''; ?>>Selesai</option>
                 </select>
             </div>
 

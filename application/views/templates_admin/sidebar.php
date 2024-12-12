@@ -86,7 +86,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sub-Menu Info UKM:</h6>
                         <a class="collapse-item" href="<?php echo base_url('admin/identitas') ?>">Identitas</a>
-                        <a class="collapse-item" href="forgot-password.html">Informasi UKM</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/informasi') ?>">Informasi UKM</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/tentang_ukm') ?>">Tentang UKM</a>
                         <a class="collapse-item" href="404.html">Materi Kegiatan UKM</a>
                         <a class="collapse-item" href="blank.html">Gallery</a>

@@ -12,6 +12,8 @@
     <tr>
         <th>NO</th>
         <th>NAMA KEGIATAN</th>
+        <th>TANGGAL KEGIATAN</th>
+        <th>LOKASI</th>
         <th>PENYELENGGARA</th>
         <th>KUOTA</th>
         <th>STATUS</th>
@@ -24,9 +26,14 @@
     <tr>
         <td width="20px"><?php echo $no++ ?></td>
         <td><?php echo $kgt->nama_kegiatan ?></td>
+        <td><?php echo $kgt->tanggal_kegiatan ?></td>
+        <td><?php echo $kgt->lokasi ?></td>
         <td><?php echo $kgt->penyelenggara ?></td>
         <td><?php echo $kgt->kuota ?></td>
+        <td><?php echo $kgt->link ?></td>
         <td><?php echo $kgt->status ?></td>
+        <td><?php echo $kgt->deskripsi ?></td>
+        <td><img src="<?php echo base_url().'assets/poster/'.$kgt->poster ?>" width="75px"></td>
         <td width="20px"><?php echo anchor('admin/kegiatan/update/' .$kgt->id_kegiatan,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?></td>
         <td width="20px"><?php echo anchor('admin/kegiatan/delete/' .$kgt->id_kegiatan,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
     </tr>

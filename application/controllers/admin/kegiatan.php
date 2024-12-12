@@ -42,9 +42,14 @@ class Kegiatan extends CI_Controller{
             'hak_akses'         => $data->hak_akses,
             'id_kegiatan'       => set_value('id_kegiatan'),
             'nama_kegiatan'     => set_value('nama_kegiatan'),
+            'tanggal_kegiatan'  => set_value('tanggal_kegiatan'),
+            'lokasi'            => set_value('lokasi'),
             'penyelenggara'     => set_value('penyelenggara'),
             'kuota'             => set_value('kuota'),
-            'status'            => set_value('status')
+            'link'              => set_value('link'),
+            'status'            => set_value('status'),
+            'deskripsi'         => set_value('deskripsi'),
+            'poster'            => set_value('poster')
         );
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar',$data);
@@ -61,9 +66,14 @@ class Kegiatan extends CI_Controller{
         }else{
             $data = array(
                 'nama_kegiatan'     => $this->input->post('nama_kegiatan', TRUE),
+                'tanggal_kegiatan'  => $this->input->post('tanggal_kegiatan, TRUE'),
+                'lokasi'            => $this->input->post('lokasi', TRUE),
                 'penyelenggara'     => $this->input->post('penyelenggara', TRUE),
                 'kuota'             => $this->input->post('kuota', TRUE),
+                'link'              => $this->input->post('link', TRUE),
                 'status'            => $this->input->post('status', TRUE),
+                'deskripsi'         => $this->input->post('deskripsi', TRUE),
+                'poster'            => $this->input->post('poster', TRUE)
             );
 
             $this->kegiatan_model->input_data($data);
@@ -78,9 +88,14 @@ class Kegiatan extends CI_Controller{
     public function _rules()
     {
         $this->form_validation->set_rules('nama_kegiatan','nama_kegiatan','required',['required' => 'Nama kegiatan wajib diisi!']);
+        $this->form_validation->set_rules('tanggal_kegiatan','tanggal_kegiatan','required',['required' => 'Tanggal kegiatan wajib diisi!']);
+        $this->form_validation->set_rules('lokasi','lokasi','required',['required' => 'Lokasi kegiatan wajib diisi!']);
         $this->form_validation->set_rules('penyelenggara','penyelenggara','required',['required' => 'penyelenggara wajib diisi!']);
-        $this->form_validation->set_rules('kuota','kuota','required',['required' => 'Tanggal Masuk wajib diisi!']);
+        $this->form_validation->set_rules('kuota','kuota','required',['required' => 'Kuota wajib diisi!']);
+        $this->form_validation->set_rules('link','link','required',['required' => 'Link wajib diisi!']);
         $this->form_validation->set_rules('status','status','required',['required' => 'Status wajib diisi!']);
+        $this->form_validation->set_rules('deskripsi','deskripsi','required',['required' => 'Deskripsi wajib diisi!']);
+        $this->form_validation->set_rules('poster','poster','required',['required' => 'Poster wajib diisi!']);
     }
 
     public function update($id)
@@ -107,15 +122,25 @@ class Kegiatan extends CI_Controller{
     {
         $id = $this->input->post('id_kegiatan');
         $nama_kegiatan = $this->input->post('nama_kegiatan');
+        $tanggal_kegiatan = $this->input->post('tanggal_kegiatan');
+        $lokasi = $this->input->post('lokasi');
         $penyelenggara = $this->input->post('penyelenggara');
         $kuota = $this->input->post('kuota');
+        $link = $this->input->post('link');
         $status = $this->input->post('status');
+        $deskripsi = $this->input->post('deskripsi');
+        $poster = $this->input->post('poster');
 
         $data = array(
-            'nama_kegiatan'     => $nama_kegiatan,
-            'penyelenggara'     => $penyelenggara,
-            'kuota'             => $kuota,
-            'status'            => $status,
+            'nama_kegiatan'         => $nama_kegiatan,
+            'tanggal_kegiatan'      => $tanggal_kegiatan,
+            'lokasi'                => $lokasi,
+            'penyelenggara'         => $penyelenggara,
+            'kuota'                 => $kuota,
+            'link'                  => $link,
+            'status'                => $status,
+            'deskripsi'             => $deskripsi,
+            'poster'                => $poster,
         );
 
         $where = array(

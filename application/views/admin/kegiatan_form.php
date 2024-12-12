@@ -24,9 +24,9 @@
             <label>Status</label>
             <select required name="status" class="form-control">
                 <option value="" selected >--Status--</option>
-                <option value="db">Di buka</option>
-                <option value="dt">Di tutup</option>
-                <option value="s">Selesai</option>
+                <option value="dibuka">Di Buka</option>
+                <option value="ditutup">Di Tutup</option>
+                <option value="selesai">Selesai</option>
                 <?php echo form_error('status','<div class="text-danger small" ml-3>')?>
             </select>
         </div>
