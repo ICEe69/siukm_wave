@@ -16,6 +16,7 @@ class Dashboard extends CI_Controller {
     public function index() {
         
         $data = $this->user_model->ambil_data($this->session->userdata['username']);
+        $admin = $this->db->where('hak_akses', '1')->count_all_results('anggota');
 
         if ($data) {
             
@@ -28,7 +29,8 @@ class Dashboard extends CI_Controller {
                 'hak_akses' => $hak_akses,
                 'anggota' => count($this->anggota_model->tampil_data()->result()), // Menghitung jumlah anggota
                 'kegiatan' => count($this->kegiatan_model->tampil_data()->result()), // Menghitung jumlah kegiatan
-                'kehadiran' => count($this->kehadiran_model->tampil_data()->result()) // Menghitung jumlah kehadiran
+                'kehadiran' => count($this->kehadiran_model->tampil_data()->result()), // Menghitung jumlah kehadiran
+                'admin' => $admin
             );
 
             // Memuat tampilan
