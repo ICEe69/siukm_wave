@@ -10,15 +10,9 @@ class Hubungi_model extends CI_Model
     {
         $this->db->insert('hubungi',$data);
     }
-    public function edit_data($where)
+    public function kirim_data($where,$table)
     {
-        return $this->db->get_where('hubungi',$where);
-    }
-
-    public function update_data($where,$data,$table)
-    {
-        $this->db->where($where);
-        $this->db->update($table,$data);
+        return $this->db->get_where($table, $where);
     }
 
     public function hapus_data($where,$table)
