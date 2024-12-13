@@ -54,16 +54,15 @@ class Hubungi extends CI_Controller{
         $subject = $this->input->post('subject');
         $message = $this->input->post('pesan');
         $config = [
-            'mailtype'  => 'html',
-            'charset'   => 'utf-8',
-            'protocol'  => 'smtp',
-            'smtp_host' => 'smtp.gmail.com',
-            'smtp_user' => 'aisyice69@gmail.com', 
-            'smtp_pass' => 'a0i6s0y9',          
-            'smtp_port' => 587,                 
-            'crlf'      => "\r\n",
-            'newline'   => "\r\n",
-            'smtp_crypto' => 'tls',
+            'mailtype'          => 'html',
+            'charset'           => 'utf-8',
+            'protocol'          => 'smtp',
+            'smtp_host'         => 'ssl://smtp.gmail.com',
+            'smtp_user'         => '',
+            'smpt_pass'         => '',
+            'smpt_port'         => 465,
+            'crlf'              => "\r\n",
+            'newline'           => "\r\n"
         ];
 
         $this->load->library('email',$config);
