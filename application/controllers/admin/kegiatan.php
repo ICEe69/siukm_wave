@@ -49,7 +49,6 @@ class Kegiatan extends CI_Controller{
             'link'              => set_value('link'),
             'status'            => set_value('status'),
             'deskripsi'         => set_value('deskripsi'),
-            'poster'            => set_value('poster')
         );
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar',$data);
@@ -64,6 +63,31 @@ class Kegiatan extends CI_Controller{
         if($this->form_validation->run() == FALSE) {
             $this->input();
         }else{
+        $poster = $_FILES['poster']['name'];
+        if ($poster != '') {
+            // Pengaturan upload file
+            $config['upload_path'] = './assets/poster';  // Folder tempat menyimpan foto
+            $config['allowed_types'] = 'jpg|jpeg|png|tiff';  // Format foto yang diterima
+            $config['max_size'] = 2048;  // Maksimum ukuran file (dalam KB)
+
+            // Load library upload
+            $this->load->library('upload', $config);
+
+            // Proses upload
+            if (!$this->upload->do_upload('poster')) {
+                echo "poster gagal diupload!";
+                // Tampilkan error upload jika gagal
+                print_r($this->upload->display_errors());
+                return;  // Jangan lanjutkan proses jika upload gagal
+            } else {
+                // Ambil nama file yang diupload
+                $poster = $this->upload->data('file_name');
+            }
+        } else {
+            // Jika tidak ada foto yang diupload, gunakan nilai default
+            $poster = 'default.jpg';  // Atau biarkan kosong jika diinginkan
+        }
+
             $data = array(
                 'nama_kegiatan'     => $this->input->post('nama_kegiatan', TRUE),
                 'tanggal_kegiatan'  => $this->input->post('tanggal_kegiatan, TRUE'),
@@ -73,7 +97,7 @@ class Kegiatan extends CI_Controller{
                 'link'              => $this->input->post('link', TRUE),
                 'status'            => $this->input->post('status', TRUE),
                 'deskripsi'         => $this->input->post('deskripsi', TRUE),
-                'poster'            => $this->input->post('poster', TRUE)
+                'poster'            => $poster
             );
 
             $this->kegiatan_model->input_data($data);
@@ -95,7 +119,7 @@ class Kegiatan extends CI_Controller{
         $this->form_validation->set_rules('link','link','required',['required' => 'Link wajib diisi!']);
         $this->form_validation->set_rules('status','status','required',['required' => 'Status wajib diisi!']);
         $this->form_validation->set_rules('deskripsi','deskripsi','required',['required' => 'Deskripsi wajib diisi!']);
-        $this->form_validation->set_rules('poster','poster','required',['required' => 'Poster wajib diisi!']);
+        
     }
 
     public function update($id)
@@ -129,7 +153,24 @@ class Kegiatan extends CI_Controller{
         $link = $this->input->post('link');
         $status = $this->input->post('status');
         $deskripsi = $this->input->post('deskripsi');
-        $poster = $this->input->post('poster');
+        $poster = $_FILES['poster']['name'];
+        if ($poster != '') {
+            // Proses upload jika ada file baru
+            $config['upload_path'] = './assets/poster';  
+            $config['allowed_types'] = 'jpg|jpeg|png|tiff';  
+            $config['max_size'] = 2048;  
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('poster')) {
+                echo "poster gagal diupload!";
+            } else {
+                $poster = $this->upload->data('file_name');
+            }
+        } else {
+            // Gunakan foto lama jika tidak ada yang diupload
+            $poster = $this->input->post('existing_poster');
+        }
 
         $data = array(
             'nama_kegiatan'         => $nama_kegiatan,
