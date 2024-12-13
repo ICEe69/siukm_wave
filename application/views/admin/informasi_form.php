@@ -11,14 +11,22 @@
             <?php echo form_error('icon','<div class="text-danger small" ml-3>')?>
         </div>
         <div class="form-group">
-            <label>Judul informasi</label>
-            <input type="text" name="judul_informasi" placeholder="Masukkan judul informasi" class="form-control">
-            <?php echo form_error('judul_informasi','<div class="text-danger small" ml-3>')?>
+            <label>Judul Informasi</label>
+            <select name="nama_kegiatan" class="form-control">
+                <option value="">--Pilih kegiatan--</option>
+                <?php foreach($kegiatan as $kgt): ?>
+                    <option value="<?php echo $kgt->nama_kegiatan; ?>"><?php echo $kgt->nama_kegiatan; ?></option>
+                <?php endforeach; ?>
+            </select>
         </div>
         <div class="form-group">
             <label>Isi Informasi</label>
-            <input type="text" name="isi_informasi" placeholder="Masukkan judul Program Studi" class="form-control">
-            <?php echo form_error('isi_informasi','<div class="text-danger small" ml-3>')?>
+            <select name="deskripsi" class="form-control">
+                <option value="">--Pilih kegiatan--</option>
+                <?php foreach($kegiatan as $kgt): ?>
+                    <option value="<?php echo $kgt->deskripsi; ?>"><?php echo $kgt->deskripsi; ?></option>
+                <?php endforeach; ?>
+            </select>
         </div>
         
         <button type="submit" class="btn btn-primary">Simpan</button>

@@ -7,6 +7,7 @@ class Welcome extends CI_Controller{
     {
         $data['identitas'] = $this->identitas_model->tampil_data('identitas')->result();
         $data['tentang_ukm'] = $this->tentangukm_model->tampil_data('tentang_ukm')->result();
+        $data['informasi'] = $this->informasi_model->tampil_data('informasi')->result();
         $data['ketua'] = $this->anggota_model->get_jabatan('Ketua');
         $data['wakil_ketua'] = $this->anggota_model->get_jabatan('Wakil Ketua');
         $data['sekretaris'] = $this->anggota_model->get_jabatan('Sekretaris');

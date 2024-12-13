@@ -88,7 +88,7 @@
                         <a class="collapse-item" href="<?php echo base_url('admin/identitas') ?>">Identitas</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/informasi') ?>">Informasi UKM</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/tentang_ukm') ?>">Tentang UKM</a>
-                        <a class="collapse-item" href="404.html">Materi Kegiatan UKM</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/hubungi') ?>">Pesan</a>
                         <a class="collapse-item" href="blank.html">Gallery</a>
                         <a class="collapse-item" href="blank.html">Kontak</a>
                     </div>

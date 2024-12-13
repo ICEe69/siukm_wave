@@ -202,7 +202,75 @@
       </div>
     </div>
   </div>
-</div><br><br>
+</div>
+
+<div class="container my-5">
+  <div class="row justify-content-center g-4">
+    <!-- Kolom kiri -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px;">
+        <div class="card-body">
+          <span class="display-2 text-info d-block mb-3">
+            <i class="<?php echo $informasi[0]->icon ?>"></i>
+          </span>
+          <h5 class="card-title badge bg-info text-white py-2 px-3">
+            <?php echo $informasi[0]->nama_kegiatan ?>
+          </h5>
+          <p class="card-text mt-3">
+            <?php echo $informasi[0]->deskripsi ?>
+          </p>
+          <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px;">
+        <div class="card-body">
+          <span class="display-2 text-info d-block mb-3">
+            <i class="<?php echo $informasi[1]->icon ?>"></i>
+          </span>
+          <h5 class="card-title badge bg-info text-white py-2 px-3">
+            <?php echo $informasi[1]->nama_kegiatan ?>
+          </h5>
+          <p class="card-text mt-3">
+            <?php echo $informasi[1]->deskripsi ?>
+          </p>
+          <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kolom kanan -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px;">
+        <div class="card-body">
+          <span class="display-2 text-info d-block mb-3">
+            <i class="<?php echo $informasi[2]->icon ?>"></i>
+          </span>
+          <h5 class="card-title badge bg-info text-white py-2 px-3">
+            <?php echo $informasi[2]->nama_kegiatan ?>
+          </h5>
+          <p class="card-text mt-3">
+            <?php echo $informasi[2]->deskripsi ?>
+          </p>
+          <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px;">
+        <div class="card-body">
+          <span class="display-2 text-info d-block mb-3">
+            <i class="<?php echo $informasi[3]->icon ?>"></i>
+          </span>
+          <h5 class="card-title badge bg-info text-white py-2 px-3">
+            <?php echo $informasi[3]->nama_kegiatan ?>
+          </h5>
+          <p class="card-text mt-3">
+            <?php echo $informasi[3]->deskripsi ?>
+          </p>
+          <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

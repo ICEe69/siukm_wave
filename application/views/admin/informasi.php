@@ -24,8 +24,8 @@
             <tr>
                 <td ><?php echo $no++ ?></td>
                 <td><?php echo $inf->icon ?></td>
-                <td><?php echo $inf->judul_informasi ?></td>
-                <td><?php echo $inf->isi_informasi ?></td>
+                <td><?php echo $inf->nama_kegiatan ?></td>
+                <td><?php echo $inf->deskripsi ?></td>
                 <td width="20px"><?php echo anchor('admin/informasi/update/' .$inf->id_informasi,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?></td>
                 <td width="20px"><?php echo anchor('admin/informasi/delete/' .$inf->id_informasi,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
             </tr>

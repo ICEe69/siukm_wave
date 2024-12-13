@@ -42,9 +42,10 @@ class Informasi extends CI_Controller{
             'hak_akses' => $data->hak_akses,
             'id_informasi'=> set_value('id_informasi'),
             'icon'=> set_value('icon'),
-            'judul_informasi'=> set_value('judul_informasi'),
-            'isi_informasi'=> set_value('isi_informasi'),
+            'nama_kegiatan'=> set_value('nama_kegiatan'),
+            'deskripsi'=> set_value('deskripsi'),
         );
+        $data['kegiatan'] = $this->kegiatan_model->tampil_data()->result();
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/informasi_form', $data); // Pastikan nama file view benar
@@ -60,8 +61,8 @@ class Informasi extends CI_Controller{
         }else{
             $data = array(
                 'icon' => $this->input->post('icon', TRUE),
-                'judul_informasi' => $this->input->post('judul_informasi', TRUE),
-                'isi_informasi' => $this->input->post('isi_informasi', TRUE),
+                'nama_kegiatan' => $this->input->post('nama_kegiatan', TRUE),
+                'deskripsi' => $this->input->post('deskripsi', TRUE)
             );
 
             $this->informasi_model->input_data($data);
@@ -75,8 +76,8 @@ class Informasi extends CI_Controller{
     public function _rules()
     {
         $this->form_validation->set_rules('icon','icon','required',['required' => 'Icon wajib diisi!']);
-        $this->form_validation->set_rules('judul_informasi','judul_informasi','required',['required' => 'judul Informasi wajib diisi!']);
-        $this->form_validation->set_rules('isi_informasi','isi_informasi','required',['required' => 'Nama Jurusan wajib diisi!']);
+        $this->form_validation->set_rules('nama_kegiatan','nama_kegiatan','required',['required' => 'judul Informasi wajib diisi!']);
+        $this->form_validation->set_rules('deskripsi','deskripsi','required',['required' => 'Deskripsi wajib diisi!']);
     }
 
     public function update($id)
@@ -85,13 +86,14 @@ class Informasi extends CI_Controller{
         
 
         $data = array(
-            'username' => $data->username,
-            'nama_anggota' => $data->nama_anggota,
-            'photo' => $data->photo,
-            'hak_akses' => $data->hak_akses,
-            'informasi' => $this->informasi_model->tampil_data()->result()
+            'username'          => $data->username,
+            'nama_anggota'      => $data->nama_anggota,
+            'photo'             => $data->photo,
+            'hak_akses'         => $data->hak_akses,
+            'informasi'         => $this->informasi_model->tampil_data()->result()
         );
         $where = array('id_informasi' => $id);
+        $data['kegiatan'] = $this->kegiatan_model->tampil_data()->result();
         $data['informasi'] = $this->informasi_model->edit_data($where,'informasi')->result(); 
 
         $this->load->view('templates_admin/header');
@@ -104,19 +106,19 @@ class Informasi extends CI_Controller{
 
     public function update_aksi()
     {
-        $id = $this->input->post('id_informasi');
-        $icon = $this->input->post('icon');
-        $judul_informasi = $this->input->post('judul_informasi');
-        $isi_informasi = $this->input->post('isi_informasi');
+        $id                 = $this->input->post('id_informasi');
+        $icon               = $this->input->post('icon');
+        $nama_kegiatan    = $this->input->post('nama_kegiatan');
+        $deskripsi      = $this->input->post('deskripsi');
 
         $data = array(
-            'icon' => $icon,
-            'judul_informasi' => $judul_informasi,
-            'isi_informasi' => $isi_informasi
+            'icon'              => $icon,
+            'nama_kegiatan'   => $nama_kegiatan,
+            'deskripsi'     => $deskripsi
         );
 
         $where = array(
-            'id_informasi' => $id
+            'id_informasi'      => $id
         );
 
         $this->informasi_model->update_data($where,$data,'informasi');
