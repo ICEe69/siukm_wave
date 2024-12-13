@@ -70,7 +70,6 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sub-Menu Laporan :</h6>
                         <a class="collapse-item" href="<?php echo base_url('admin/laporan_kehadiran') ?>">Laporan Absensi</a>
-                        <a class="collapse-item" href="utilities1-border.html">Laporan Kegiatan</a>
                     </div>
                 </div>
             </li>
@@ -89,8 +88,6 @@
                         <a class="collapse-item" href="<?php echo base_url('admin/informasi') ?>">Informasi UKM</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/tentang_ukm') ?>">Tentang UKM</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/hubungi') ?>">Pesan</a>
-                        <a class="collapse-item" href="blank.html">Gallery</a>
-                        <a class="collapse-item" href="blank.html">Kontak</a>
                     </div>
                 </div>
             </li>

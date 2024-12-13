@@ -204,11 +204,11 @@
   </div>
 </div>
 
-<div class="container my-5">
+<div class="mx-5 my-5">
   <div class="row justify-content-center g-4">
     <!-- Kolom kiri -->
     <div class="col-md-6">
-      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px;">
+      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh;">
         <div class="card-body">
           <span class="display-2 text-info d-block mb-3">
             <i class="<?php echo $informasi[0]->icon ?>"></i>
@@ -222,7 +222,7 @@
           <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
         </div>
       </div>
-      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px;">
+      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh;">
         <div class="card-body">
           <span class="display-2 text-info d-block mb-3">
             <i class="<?php echo $informasi[1]->icon ?>"></i>
@@ -240,7 +240,7 @@
 
     <!-- Kolom kanan -->
     <div class="col-md-6">
-      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px;">
+      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh;">
         <div class="card-body">
           <span class="display-2 text-info d-block mb-3">
             <i class="<?php echo $informasi[2]->icon ?>"></i>
@@ -254,7 +254,7 @@
           <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
         </div>
       </div>
-      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px;">
+      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh;">
         <div class="card-body">
           <span class="display-2 text-info d-block mb-3">
             <i class="<?php echo $informasi[3]->icon ?>"></i>
@@ -267,6 +267,45 @@
           </p>
           <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <div class="card-header">
+    <strong>GALLERY</strong>
+  </div><br>
+  <div class="card mb-4" style="width: 95%; margin: 0 auto; overflow: hidden;">
+    <!-- Gambar dengan ukuran yang lebih besar, melebar ke kiri dan kanan -->
+    <img class="card-img-top" src="<?php echo base_url('assets/img/gallery7.jpeg') ?>" alt="Card image cap" style="width: 110%; margin-left: -5%; margin-right: -5%; height: 50vh; object-fit:cover;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+
+  <div class="card-deck m-4">
+    <div class="card">
+      <img class="card-img-top" src="<?php echo base_url('assets/img/gallery7.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="<?php echo base_url('assets/img/gallery3.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="<?php echo base_url('assets/img/gallery5.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
       </div>
     </div>
   </div>

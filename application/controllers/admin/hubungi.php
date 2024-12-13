@@ -58,36 +58,46 @@ class Hubungi extends CI_Controller{
             'charset'           => 'utf-8',
             'protocol'          => 'smtp',
             'smtp_host'         => 'ssl://smtp.gmail.com',
-            'smtp_user'         => '',
-            'smpt_pass'         => '',
-            'smpt_port'         => 465,
+            'smtp_user'         => 'rihadatulaisy329@gmail.com',
+            'smtp_pass'         => 'kbwxcmacgzyfxgrt',
+            'smtp_port'         => 465,
             'crlf'              => "\r\n",
             'newline'           => "\r\n"
         ];
 
-        $this->load->library('email',$config);
+        $this->load->library('email', $config);
 
-        $this->email->from("Sistem Informasi Unit Kegiatan Mahasiswa");
-
+        $this->email->from("rihadatulaisy329@gmail.com", "Sistem Informasi Unit Kegiatan Mahasiswa");
         $this->email->to($to_email);
-
         $this->email->subject($subject);
-
         $this->email->message($message);
 
-        if($this->email->send())
-        {
-            $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible fade show" role="alert">
+        if ($this->email->send()) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                     Pesan Terkirim!!
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>');
             redirect('admin/hubungi');
-        }else{
-            $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    Pesan Tidak Terkirim!!
+        } else {
+            // Mendapatkan pesan error dari library email
+            $error_message = $this->email->print_debugger(['headers', 'subject', 'body']);
+            
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Pesan Tidak Terkirim!!<br><pre>' . htmlspecialchars($error_message) . '</pre>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>');
             redirect('admin/hubungi');
         }
     }
+    public function delete($id)
+    {
+        $where = array('id_hubungi' => $id);
+        $this->hubungi_model->hapus_data($where, 'hubungi');
+        $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Data hubungi Berhasil di Hapus!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>');
+        redirect('admin/hubungi');
+    }
+
 }
