@@ -273,5 +273,40 @@
 </div>
 
 
+<form method="post" action="<?php echo base_url('welcome/kirim_pesan') ?>" class="p-4 m-5 border rounded shadow-sm">
+
+  <div class="alert alert-primary d-flex align-items-center mb-4">
+    <i class="fas fa-envelope-open-text me-2"></i>
+    <strong>Hubungi Kami</strong>
+  </div>
+
+  <?php echo $this->session->flashdata('pesan') ?>
+
+  <div class="mb-3">
+    <label for="nama" class="form-label">Nama</label>
+    <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan nama Anda" required>
+    <?php echo form_error('nama', '<div class="text-danger small">', '</div>') ?>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" name="email" id="email" class="form-control" placeholder="Masukkan email Anda" required>
+    <?php echo form_error('email', '<div class="text-danger small">', '</div>') ?>
+  </div>
+
+  <div class="mb-3">
+    <label for="pesan" class="form-label">Pesan</label>
+    <textarea name="pesan" id="pesan" class="form-control" rows="4" placeholder="Tulis pesan Anda di sini" required></textarea>
+    <?php echo form_error('pesan', '<div class="text-danger small">', '</div>') ?>
+  </div>
+
+  <div class="text-end">
+    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+  </div>
+
+</form>
+
+
+
 
 
