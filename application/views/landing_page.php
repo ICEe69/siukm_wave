@@ -2,13 +2,13 @@
 
   <?php foreach($identitas as $id) : ?>
   <a class="navbar-brand" style="color: white;"><strong><?php echo $id->nama_website ?></strong></a>
-  <span class="small"><?php echo $id->alamat ?> - <?php echo $id->email ?> - <?php echo $id->telp ?></span>
   <?php endforeach; ?>
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-    <a class="btn btn-outline-light my-2 my-sm-0 ml-2" href="<?php echo base_url('login')?>">Login</a>
-  </form>
+    <a class="btn btn-outline-light my-2 my-sm-0" 
+       href="https://docs.google.com/forms/d/e/1FAIpQLScRciuWXCNFK8bHHo2MUxSDauC_ax7behbO4-3uSPOK26AxLw/viewform?usp=header">Daftar Disini</a>
+    <a class="btn btn-outline-light my-2 my-sm-0 ml-2" 
+       href="<?php echo base_url('login'); ?>">Login</a>
+</form>
 </nav>
 
 
@@ -315,10 +315,10 @@
 <form method="post" action="<?php echo base_url('welcome/kirim_pesan') ?>" class="p-4 m-5 border rounded shadow-sm">
 
   <div class="alert alert-primary d-flex align-items-center mb-4">
-    <i class="fas fa-envelope-open-text me-2"></i>
-    <strong>Hubungi Kami</strong>
+      <i class="fas fa-envelope-open-text me-2"></i>
+      <strong style="margin-right: 20px;">Hubungi Kami</strong>
+      <span class="small"><?php echo $id->alamat ?> - <?php echo $id->email ?> - <?php echo $id->telp ?></span>
   </div>
-
   <?php echo $this->session->flashdata('pesan') ?>
 
   <div class="mb-3">

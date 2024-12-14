@@ -35,8 +35,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sub-Menu Event :</h6>
-                        <a class="collapse-item" href="<?php echo base_url('anggota/kehadiran') ?>">Data Absensi</a>
-                        <a class="collapse-item" href="<?php echo base_url('anggota/kegiatan') ?>">Data Kegiatan</a>
+                        <a class="collapse-item" href="<?php echo base_url('anggota/kehadiran') ?>">Absensi</a>
+                        <a class="collapse-item" href="<?php echo base_url('anggota/kegiatan') ?>">Kegiatan</a>
                     </div>
                 </div>
             </li>

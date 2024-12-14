@@ -1,7 +1,7 @@
-<div class="container-fluid" style="margin-bottom: 100px;">
+<div class="container-fluid" style="margin-bottom: 100px; height: 100vh; overflow-y: auto;">
 
     <div class="alert alert-success" role="alert">
-        <i class="fas fa-fw fa-tachometer-alt"></i> Dashboard
+        <i class="fas fa-fw fa-tachometer-alt"></i> Kegiatan
     </div>
 
     <?php foreach ($kegiatan as $kgt) : ?>
@@ -12,17 +12,17 @@
                 if ($kgt->status == 'dibuka') {
                     echo 'bg-primary text-white'; // Biru untuk "dibuka"
                 } elseif ($kgt->status == 'ditutup') {
-                    echo 'bg-danger text-white'; // Kuning untuk "ditutup"
+                    echo 'bg-danger text-white'; // Merah untuk "ditutup"
                 } elseif ($kgt->status == 'selesai') {
                     echo 'bg-dark text-white'; // Hitam untuk "selesai"
                 }
             ?>">
             <?php echo $kgt->status ?>
         </div>
-        <div class="card-body">
+        <div class="card-body"> <!-- Tambahkan scroll di body card jika konten panjang -->
             <div class="row">
-                <div class="col-md-5 text-center">
-                    <img style="width: 60vh; height: 65vh;" src="<?php echo base_url('assets/poster/' . $kgt->poster) ?>">
+                <div class="col-md-5 text-center"> <!-- Tambahkan scroll jika gambar terlalu besar -->
+                    <img style="width: 100%; height: auto;" src="<?php echo base_url('assets/poster/' . $kgt->poster) ?>">
                 </div>
                 <div class="col-md-6">
                     <table class="table">
@@ -65,7 +65,9 @@
                         <tr>
                             <td>Deskripsi</td>
                             <td>:</td>
-                            <td><?php echo $kgt->deskripsi ?></td>
+                            <td style="max-height: 150px; overflow-y: auto;"> <!-- Tambahkan scroll pada deskripsi jika panjang -->
+                                <?php echo $kgt->deskripsi ?>
+                            </td>
                         </tr>
                     </table>
                 </div>

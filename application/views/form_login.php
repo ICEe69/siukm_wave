@@ -111,8 +111,8 @@
     <div class="container-login" id="loginSection">
         <!-- Left Section -->
         <div class="login-left">
-            <h1>Welcome Back!</h1>
-            <p>We create digital solutions that help you stand out from the competition.<br>Join us today!</p>
+            <h1>Selamat Datang!</h1>
+            <p>Login untuk memulai perjalanan di SIUKM. Temukan kesempatan dan kembangkan diri.<br>Ayo Bergabung!</p>
         </div>
 
         <!-- Right Section -->
