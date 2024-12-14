@@ -1,34 +1,30 @@
-<nav class="navbar navbar-light bg-primary text-white">
-
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #788728; position: fixed; top: 0; width: 100%; z-index: 1030;">
   <?php foreach($identitas as $id) : ?>
   <a class="navbar-brand" style="color: white;"><strong><?php echo $id->nama_website ?></strong></a>
   <?php endforeach; ?>
-  <form class="form-inline">
-    <a class="btn btn-outline-light my-2 my-sm-0" 
-       href="https://docs.google.com/forms/d/e/1FAIpQLScRciuWXCNFK8bHHo2MUxSDauC_ax7behbO4-3uSPOK26AxLw/viewform?usp=header">Daftar Disini</a>
-    <a class="btn btn-outline-light my-2 my-sm-0 ml-2" 
-       href="<?php echo base_url('login'); ?>">Login</a>
-</form>
-</nav>
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav mx-auto">
-      <a class="nav-link ml-3" href="#">BERANDA <span class="sr-only">(current)</span></a>
-      <a class="nav-link ml-3" href="#">INFORMASI</a>
-      <a class="nav-link ml-3" href="#">TENTANG UKM</a>
-      <a class="nav-link ml-3" href="#">GALLERY</a>
-      <a class="nav-link ml-3" href="#">KONTAK</a>
+  <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+    <div class="navbar-nav" style="color: #A9AF33;">
+      <a class="nav-link ml-3" style="color:white" href="#carouselExampleIndicators">BERANDA <span class="sr-only">(current)</span></a>
+      <a class="nav-link ml-3" style="color:white" href="#infoukm">INFORMASI</a>
+      <a class="nav-link ml-3" style="color:white" href="#">TENTANG UKM</a>
+      <a class="nav-link ml-3" style="color:white" href="#galeriukm">GALERI</a>
+      <a class="nav-link ml-3" style="color:white" href="#kontakukm">KONTAK</a>
     </div>
+    <form class="form-inline ml-3">
+      <a class="btn btn-outline-light my-2 my-sm-0" 
+        href="https://docs.google.com/forms/d/e/1FAIpQLScRciuWXCNFK8bHHo2MUxSDauC_ax7behbO4-3uSPOK26AxLw/viewform?usp=header">DAFTAR!</a>
+      <a class="btn btn-outline-light my-2 my-sm-0 ml-2" 
+        href="<?php echo base_url('login'); ?>">LOGIN</a>
+    </form>
   </div>
 </nav>
 
-<div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
-  <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel" style=" width: 100%">
+
+<div class="card text-center" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);";>
+  <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel" style=" width: 100% ">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -58,17 +54,17 @@
 
 
 <div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
-  <div class="card-header">
-    <strong>TENTANG UKM</strong>
+  <div class="card-header" style="background-color: #788728;">
+    <strong style="color: white;">TENTANG UKM</strong>
   </div>
-  <div class="card-body">
-    <p class="card-text">
+  <div class="card-body" style="background-color: #A9AF33";>
+    <p class="card-text" style="color: white;">
     <?php foreach($tentang_ukm as $tu) : ?>
     <?php echo word_limiter($tu->sejarah,75) ?>
     <?php endforeach; ?>
     </p>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn" style="background-color: #F8BA2B; color:white" data-toggle="modal" data-target="#exampleModal">
       Selengkapnya...
     </button>
   </div>
@@ -106,111 +102,114 @@
   </div>
 </div>
 
-<div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
-  <div class="card-header">
-    <strong>STRUKTUR JABATAN UKM</strong>
+<div id="infoukm" class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
+  <div class="card-header" style="background-color:#788728">
+    <strong style="color:white">STRUKTUR JABATAN UKM</strong>
   </div>
-  <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 2%;">
-
+  <div class="card-body" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 2%; background-color: #A9AF33;">
     <!-- Card pertama -->
-    <div class="col-2 mb-2">
-      <div class="card">
-          <img src="<?php echo base_url('assets/photo/' . (isset($ketua->photo) ? htmlspecialchars($ketua->photo) : 'default.jpg')); ?>" 
-              class="card-img-top" 
-              alt="Foto Ketua" 
-              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
-          <div class="card-body" style="padding: 15px;">
-              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
-                  <?php echo htmlspecialchars($ketua->nama_anggota); ?>
-              </h5>
-              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
-                  <?php echo htmlspecialchars($ketua->nama_jabatan); ?>
-              </p>
-          </div>
+      <div class="col-1.5 mb-2">
+        <div class="card" style>
+            <img src="<?php echo base_url('assets/photo/' . (isset($ketua->photo) ? htmlspecialchars($ketua->photo) : 'default.jpg')); ?>" 
+                class="card-img-top" 
+                alt="Foto Ketua" 
+                style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+            <div class="card-body" style="padding: 15px;">
+                <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                    <?php echo htmlspecialchars($ketua->nama_anggota); ?>
+                </h5>
+                <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                    <?php echo htmlspecialchars($ketua->nama_jabatan); ?>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <!-- Card kedua -->
+      <div class="col-1.5 mb-2">
+        <div class="card">
+            <img src="<?php echo base_url('assets/photo/' . (isset($wakil_ketua->photo) ? htmlspecialchars($wakil_ketua->photo) : 'default.jpg')); ?>" 
+                class="card-img-top" 
+                alt="Foto Wakil Ketua" 
+                style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+            <div class="card-body" style="padding: 15px;">
+                <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                    <?php echo htmlspecialchars($wakil_ketua->nama_anggota); ?>
+                </h5>
+                <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                    <?php echo htmlspecialchars($wakil_ketua->nama_jabatan); ?>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <!-- Card ketiga -->
+      <div class="col-1.5 mb-2">
+        <div class="card">
+            <img src="<?php echo base_url('assets/photo/' . (isset($sekretaris->photo) ? htmlspecialchars($sekretaris->photo) : 'default.jpg')); ?>" 
+                class="card-img-top" 
+                alt="Foto Sekretaris" 
+                style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+            <div class="card-body" style="padding: 15px;">
+                <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                    <?php echo htmlspecialchars($sekretaris->nama_anggota); ?>
+                </h5>
+                <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                    <?php echo htmlspecialchars($sekretaris->nama_jabatan); ?>
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <!-- Card keempat -->
+      <div class="col-1.5 mb-2">
+        <div class="card">
+            <img src="<?php echo base_url('assets/photo/' . (isset($bendahara->photo) ? htmlspecialchars($bendahara->photo) : 'default.jpg')); ?>" 
+                class="card-img-top" 
+                alt="Foto Bendahara" 
+                style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+            <div class="card-body" style="padding: 15px;">
+                <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                    <?php echo htmlspecialchars($bendahara->nama_anggota); ?>
+                </h5>
+                <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                    <?php echo htmlspecialchars($bendahara->nama_jabatan); ?>
+                </p>
+            </div>
+        </div>
+      </div> 
+
+      <!-- Card kelima -->
+      <div class="col-1.5 mb-2">
+        <div class="card">
+            <img src="<?php echo base_url('assets/photo/' . (isset($humas->photo) ? htmlspecialchars($humas->photo) : 'default.jpg')); ?>" 
+                class="card-img-top" 
+                alt="Foto Humas" 
+                style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
+            <div class="card-body" style="padding: 15px;">
+                <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
+                    <?php echo htmlspecialchars($humas->nama_anggota); ?>
+                </h5>
+                <p class="card-text text-center" style="font-size: 1rem; color: #777;">
+                    <?php echo htmlspecialchars($humas->nama_jabatan); ?>
+                </p>
+            </div>
+        </div>
       </div>
     </div>
-
-    <!-- Card kedua -->
-    <div class="col-2 mb-2">
-      <div class="card">
-          <img src="<?php echo base_url('assets/photo/' . (isset($wakil_ketua->photo) ? htmlspecialchars($wakil_ketua->photo) : 'default.jpg')); ?>" 
-              class="card-img-top" 
-              alt="Foto Wakil Ketua" 
-              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
-          <div class="card-body" style="padding: 15px;">
-              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
-                  <?php echo htmlspecialchars($wakil_ketua->nama_anggota); ?>
-              </h5>
-              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
-                  <?php echo htmlspecialchars($wakil_ketua->nama_jabatan); ?>
-              </p>
-          </div>
-      </div>
-    </div>
-
-    <!-- Card ketiga -->
-    <div class="col-2 mb-2">
-      <div class="card">
-          <img src="<?php echo base_url('assets/photo/' . (isset($sekretaris->photo) ? htmlspecialchars($sekretaris->photo) : 'default.jpg')); ?>" 
-              class="card-img-top" 
-              alt="Foto Sekretaris" 
-              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
-          <div class="card-body" style="padding: 15px;">
-              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
-                  <?php echo htmlspecialchars($sekretaris->nama_anggota); ?>
-              </h5>
-              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
-                  <?php echo htmlspecialchars($sekretaris->nama_jabatan); ?>
-              </p>
-          </div>
-      </div>
-    </div>
-
-    <!-- Card keempat -->
-    <div class="col-2 mb-2">
-      <div class="card">
-          <img src="<?php echo base_url('assets/photo/' . (isset($bendahara->photo) ? htmlspecialchars($bendahara->photo) : 'default.jpg')); ?>" 
-              class="card-img-top" 
-              alt="Foto Bendahara" 
-              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
-          <div class="card-body" style="padding: 15px;">
-              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
-                  <?php echo htmlspecialchars($bendahara->nama_anggota); ?>
-              </h5>
-              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
-                  <?php echo htmlspecialchars($bendahara->nama_jabatan); ?>
-              </p>
-          </div>
-      </div>
-    </div> 
-
-    <!-- Card kelima -->
-    <div class="col-2 mb-2">
-      <div class="card">
-          <img src="<?php echo base_url('assets/photo/' . (isset($humas->photo) ? htmlspecialchars($humas->photo) : 'default.jpg')); ?>" 
-              class="card-img-top" 
-              alt="Foto Humas" 
-              style="height: 220px; width: 100%; object-fit: contain; background-color: #f0f0f0;">
-          <div class="card-body" style="padding: 15px;">
-              <h5 class="card-title text-center" style="font-size: 1.2rem; font-weight: 600; color: #333;">
-                  <?php echo htmlspecialchars($humas->nama_anggota); ?>
-              </h5>
-              <p class="card-text text-center" style="font-size: 1rem; color: #777;">
-                  <?php echo htmlspecialchars($humas->nama_jabatan); ?>
-              </p>
-          </div>
-      </div>
-    </div>
+  </div>
   </div>
 </div>
+
+
 
 <div class="mx-5 my-5">
   <div class="row justify-content-center g-4">
     <!-- Kolom kiri -->
     <div class="col-md-6">
-      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh;">
+      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh; background-color:#4A2B29;">
         <div class="card-body">
-          <span class="display-2 text-info d-block mb-3">
+          <span class="display-2 d-block mb-3" style="color:white;">
             <i class="<?php echo $informasi[0]->icon ?>"></i>
           </span>
           <h5 class="card-title badge bg-info text-white py-2 px-3">
@@ -274,50 +273,52 @@
 
 
 <div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-  <div class="card-header">
-    <strong>GALLERY</strong>
-  </div><br>
-  <div class="card mb-4" style="width: 95%; margin: 0 auto; overflow: hidden;">
-    <!-- Gambar dengan ukuran yang lebih besar, melebar ke kiri dan kanan -->
-    <img class="card-img-top" src="<?php echo base_url('assets/img/gallery7.jpeg') ?>" alt="Card image cap" style="width: 110%; margin-left: -5%; margin-right: -5%; height: 50vh; object-fit:cover;">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
+  <div id="galeriukm" class="card-header" style="background-color: #788728;">
+    <strong style="color:white">GALERI</strong>
   </div>
-
-  <div class="card-deck m-4">
-    <div class="card">
-      <img class="card-img-top" src="<?php echo base_url('assets/img/gallery7.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
+  <div class="card-body border rounded " style="background-color: white";>
+    <div class="card mb-4" style="width: 95%; margin: 0 auto; overflow: hidden;">
+      <!-- Gambar dengan ukuran yang lebih besar, melebar ke kiri dan kanan -->
+      <img class="card-img-top" src="<?php echo base_url('assets/img/gallery7.jpeg') ?>" alt="Card image cap" style="width: 110%; margin-left: -5%; margin-right: -5%; height: 50vh; object-fit:cover;">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
-    <div class="card">
-      <img class="card-img-top" src="<?php echo base_url('assets/img/gallery3.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    
+    <div class="card-deck m-4">
+      <div class="card">
+        <img class="card-img-top" src="<?php echo base_url('assets/img/gallery7.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="<?php echo base_url('assets/img/gallery5.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <div class="card">
+        <img class="card-img-top" src="<?php echo base_url('assets/img/gallery3.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="<?php echo base_url('assets/img/gallery5.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 
-<form method="post" action="<?php echo base_url('welcome/kirim_pesan') ?>" class="p-4 m-5 border rounded shadow-sm">
+<form id="kontakukm" method="post" action="<?php echo base_url('welcome/kirim_pesan') ?>" class="p-4 m-5 border rounded shadow-sm">
 
-  <div class="alert alert-primary d-flex align-items-center mb-4">
-      <i class="fas fa-envelope-open-text me-2"></i>
-      <strong style="margin-right: 20px;">Hubungi Kami</strong>
-      <span class="small"><?php echo $id->alamat ?> - <?php echo $id->email ?> - <?php echo $id->telp ?></span>
+  <div class="alert d-flex align-items-center mb-4" style="background-color: #788728;">
+      <i style="color: white; margin-right:1vh" class="fas fa-envelope-open-text me-2"></i>
+      <strong style="margin-right: 20px; color:white">Hubungi Kami</strong>
+      <span style="color:white" class="small"><?php echo $id->alamat ?> - <?php echo $id->email ?> - <?php echo $id->telp ?></span>
   </div>
   <?php echo $this->session->flashdata('pesan') ?>
 
@@ -340,7 +341,7 @@
   </div>
 
   <div class="text-end">
-    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+    <button type="submit" class="btn" style="background-color: #F8BA2B; color:white">Kirim Pesan</button>
   </div>
 
 </form>

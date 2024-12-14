@@ -1,12 +1,12 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-success" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt"></i>Jabatan
+    <div class="alert alert-dark" role="alert">
+       <i class="fas fa-fw fa-tachometer-alt" style="margin-right: 5px;"></i>Jabatan
     </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php echo anchor('admin/jabatan/input','<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Jabatan</button>') ?>
+    <?php echo anchor('admin/jabatan/input','<button style="background-color: #F8BA2B; color:white;" class="btn btn-sm mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Jabatan</button>') ?>
 
 
     <table class="table table-striped table-bordered table-hover">

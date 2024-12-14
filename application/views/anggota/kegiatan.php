@@ -22,7 +22,7 @@
         <div class="card-body"> <!-- Tambahkan scroll di body card jika konten panjang -->
             <div class="row">
                 <div class="col-md-5 text-center"> <!-- Tambahkan scroll jika gambar terlalu besar -->
-                    <img style="width: 100%; height: auto;" src="<?php echo base_url('assets/poster/' . $kgt->poster) ?>">
+                    <img style="width: 100%; height: 65vh;" src="<?php echo base_url('assets/poster/' . $kgt->poster) ?>">
                 </div>
                 <div class="col-md-6">
                     <table class="table">
@@ -39,13 +39,7 @@
                         <tr>
                             <td>Lokasi</td>
                             <td>:</td>
-                            <td>
-                                <!-- Embed Google Maps Iframe -->
-                                <iframe 
-                                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=<?php echo $kgt->lokasi ?>" 
-                                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-                                </iframe>
-                            </td>
+                            <td><?php echo $kgt->lokasi ?></td>
                         </tr>
                         <tr>
                             <td>Penyelenggara</td>
