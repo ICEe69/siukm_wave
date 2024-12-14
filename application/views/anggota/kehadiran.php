@@ -1,13 +1,13 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-success" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt"></i>Kehadiran
+    <div class="alert alert-dark" role="alert">
+       <i class="fas fa-fw fa-user-check" style="margin-right: 5px;"></i>Kehadiran
 </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
 
 <div class="card mb-3">
-    <div class="card-header bg-primary text-white">
+    <div class="card-header text-white" style="background-color: #264533;">
         Filter Data Kehadiran Anggota
     </div>
         <div class="card-body">
@@ -96,7 +96,7 @@
                     }
                 ?>
                 
-                <button type="submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i>Tampilkan Data</button>            
+                <button type="submit" class="btn mb-2 ml-auto" style="background-color: #F5C437; color: white;"><i class="fas fa-eye"></i>Tampilkan Data</button>            
             </form>
         </div>
     </div>
@@ -116,7 +116,7 @@
     
     ?>
 
-    <div class="alert alert-info">
+    <div class="alert alert-dark">
         Menampilkan Data Kehadiran Anggota Tanggal: <span class="font-weight-bold"><?php echo $tanggal ?></span> Bulan: <span class="font-weight-bold"><?php echo $bulan ?></span> Tahun: <span class="font-weight-bold"><?php echo $tahun ?></span>
     </div>
 

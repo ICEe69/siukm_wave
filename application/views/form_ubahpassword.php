@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-success" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt"></i>Ubah Password
+    <div class="alert alert-dark" role="alert">
+       <i class="fas fa-fw fa-lock" style="margin-right: 5px;"></i>Ubah Password
     </div>
 
     <div class="card">
@@ -20,7 +20,7 @@
                 <?php echo form_error('ulang_pass','<div class="text-danger small" ml-3>')?>
             </div>
 
-            <button type="submit" class="btn btn-success">Simpan</button>
+            <button type="submit" class="btn" style="background-color: #F5C437; color:white;">Simpan</button>
 
             </form>
         </div>

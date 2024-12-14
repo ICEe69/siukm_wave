@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
-    <div class="alert alert-success" role="alert">
-        <i class="fas fa-fw fa-tachometer-alt"></i> Form Update Anggota
+    <div class="alert alert-dark" role="alert">
+        <i class="fas fa-fw fa-user-edit" style="margin-right: 5px;"></i> Form Update Anggota
     </div>
 
     <?php foreach ($anggota as $agt): ?>

@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
-    <div class="alert alert-success" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt"></i>Form Input anggota
+    <div class="alert alert-dark" role="alert">
+       <i class="fas fa-fw fa-user-edit" style="margin-right: 5px;"></i>Form Input anggota
     </div>
 
     <form method="post" action="<?php echo base_url('admin/anggota/input_aksi') ?>" enctype="multipart/form-data">

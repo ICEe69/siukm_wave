@@ -1,12 +1,12 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-success" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt"></i>kegiatan
+    <div class="alert alert-dark" role="alert">
+       <i class="fas fa-fw fa-file-alt" style="margin-right: 5px;"></i>kegiatan
     </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php echo anchor('admin/kegiatan/input','<button class="btn btn-sm btn-primary mb-3"><i class="fas fa-plus fa-sm"></i> Tambah Kegiatan</button>') ?>
+    <?php echo anchor('admin/kegiatan/input','<button class="btn btn-sm mb-3" style="background-color: #F8BA2B; color:white;"><i class="fas fa-plus fa-sm"></i> Tambah Kegiatan</button>') ?>
 
     <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">

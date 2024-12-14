@@ -1,16 +1,16 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-success" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt"></i>Dashboard
+    <div class="alert alert-dark" role="alert">
+       <i class="fas fa-fw fa-tachometer-alt" style="margin-right: 5px;"></i>Dashboard
     </div>
 
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-dark" role="alert">
         <h4 class="alert-heading">Selamat Datang!</h4>
         <p>Selamat Datang <strong><?php echo $username; ?></strong> di Sistem Informasi Unit Kegiatan Mahasiswa Universitas Maritim Raja Ali Haji, Anda Login sebagai <strong><?php echo $hak_akses; ?></strong></p>
     </div>
 
     <div class="card mx-auto" style="margin-bottom: 120px">
-        <div class="card-header font-weight-bold bg-primary text-white">
+        <div class="card-header font-weight-bold text-white" style="background-color: #264533;">
             Data Anggota
         </div>
 

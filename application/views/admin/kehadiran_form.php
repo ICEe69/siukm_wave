@@ -1,13 +1,13 @@
 <div class="container-fluid">
 
-    <div class="alert alert-success" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt"></i>Kehadiran
+    <div class="alert alert-dark" role="alert">
+       <i class="fas fa-fw fa-user-check" style="margin-right: 5px;"></i>Kehadiran
 </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
 
 <div class="card mb-3">
-    <div class="card-header bg-primary text-white">
+    <div class="card-header text-white" style="background-color: #264533">
         Filter Data Kehadiran Anggota
     </div>
         <div class="card-body">
@@ -83,7 +83,7 @@
             </div>
                 
                 <br>
-                <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-eye"></i>Generate</button>
+                <button type="submit" class="btn mb-2" style="background-color: #F8BA2B; color:white;"><i class="fas fa-eye"></i>Generate</button>
             </form>
         </div>
     </div>
@@ -103,7 +103,7 @@
     
     ?>
 
-    <div class="alert alert-info">
+    <div class="alert alert-dark">
         Menampilkan Data Kehadiran Anggota Tanggal: <span class="font-weight-bold"><?php echo $tanggal ?></span> Bulan: <span class="font-weight-bold"><?php echo $bulan ?></span> Tahun: <span class="font-weight-bold"><?php echo $tahun ?></span>
     </div>
 
@@ -111,7 +111,7 @@
     $jml_data = count($input);
     if($jml_data > 0) { ?>
     <form method="POST">
-    <button class="btn btn-success mb-3" type="submit" name="submit" value="submit">Simpan</button>
+    <button class="btn mb-3" type="submit" name="submit" value="submit" style="background-color: #788728; color:white;">Simpan</button>
         <table class="table table-striped table-bordered table-hover">
         <tr>
             <td class="text-center">NO</td>

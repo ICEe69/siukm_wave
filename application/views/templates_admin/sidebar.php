@@ -4,7 +4,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #788728;">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #264533;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -53,7 +53,6 @@
                         <h6 class="collapse-header">Sub-Menu Event :</h6>
                         <a class="collapse-item" href="<?php echo base_url('admin/kehadiran') ?>">Data Absensi</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/kegiatan') ?>">Data Kegiatan</a>
-                        <a class="collapse-item" href="<?php echo base_url('admin/keuangan') ?>">Data Keuangan</a>
                     </div>
                 </div>
             </li>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #788728; position: fixed; top: 0; width: 100%; z-index: 1030;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #264533; position: fixed; top: 0; width: 100%; z-index: 1030;">
   <?php foreach($identitas as $id) : ?>
   <a class="navbar-brand" style="color: white;"><strong><?php echo $id->nama_website ?></strong></a>
   <?php endforeach; ?>
@@ -6,7 +6,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
-    <div class="navbar-nav" style="color: #A9AF33;">
+    <div class="navbar-nav">
       <a class="nav-link ml-3" style="color:white" href="#carouselExampleIndicators">BERANDA <span class="sr-only">(current)</span></a>
       <a class="nav-link ml-3" style="color:white" href="#infoukm">INFORMASI</a>
       <a class="nav-link ml-3" style="color:white" href="#">TENTANG UKM</a>
@@ -15,7 +15,7 @@
     </div>
     <form class="form-inline ml-3">
       <a class="btn btn-outline-light my-2 my-sm-0" 
-        href="https://docs.google.com/forms/d/e/1FAIpQLScRciuWXCNFK8bHHo2MUxSDauC_ax7behbO4-3uSPOK26AxLw/viewform?usp=header">DAFTAR!</a>
+        href="https://docs.google.com/forms/d/e/1FAIpQLScRciuWXCNFK8bHHo2MUxSDauC_ax7behbO4-3uSPOK26AxLw/viewform?usp=header">DAFTAR</a>
       <a class="btn btn-outline-light my-2 my-sm-0 ml-2" 
         href="<?php echo base_url('login'); ?>">LOGIN</a>
     </form>
@@ -54,11 +54,11 @@
 
 
 <div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
-  <div class="card-header" style="background-color: #788728;">
+  <div class="card-header" style="background-color: #264533;">
     <strong style="color: white;">TENTANG UKM</strong>
   </div>
-  <div class="card-body" style="background-color: #A9AF33";>
-    <p class="card-text" style="color: white;">
+  <div class="card-body">
+    <p class="card-text" style="color: black;">
     <?php foreach($tentang_ukm as $tu) : ?>
     <?php echo word_limiter($tu->sejarah,75) ?>
     <?php endforeach; ?>
@@ -103,10 +103,10 @@
 </div>
 
 <div id="infoukm" class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
-  <div class="card-header" style="background-color:#788728">
+  <div class="card-header" style="background-color:#264533">
     <strong style="color:white">STRUKTUR JABATAN UKM</strong>
   </div>
-  <div class="card-body" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 2%; background-color: #A9AF33;">
+  <div class="card-body" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 2%;">
     <!-- Card pertama -->
       <div class="col-1.5 mb-2">
         <div class="card" style>
@@ -273,7 +273,7 @@
 
 
 <div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-  <div id="galeriukm" class="card-header" style="background-color: #788728;">
+  <div id="galeriukm" class="card-header" style="background-color: #264533;">
     <strong style="color:white">GALERI</strong>
   </div>
   <div class="card-body border rounded " style="background-color: white";>
@@ -315,7 +315,7 @@
 
 <form id="kontakukm" method="post" action="<?php echo base_url('welcome/kirim_pesan') ?>" class="p-4 m-5 border rounded shadow-sm">
 
-  <div class="alert d-flex align-items-center mb-4" style="background-color: #788728;">
+  <div class="alert d-flex align-items-center mb-4" style="background-color: #264533;">
       <i style="color: white; margin-right:1vh" class="fas fa-envelope-open-text me-2"></i>
       <strong style="margin-right: 20px; color:white">Hubungi Kami</strong>
       <span style="color:white" class="small"><?php echo $id->alamat ?> - <?php echo $id->email ?> - <?php echo $id->telp ?></span>

@@ -36,7 +36,7 @@
         }
 
         .login-left {
-            background-color: #A9AF33;
+            background-color: #264533;
             color: white;
             padding: 50px;
             flex: 1;
@@ -81,20 +81,20 @@
             font-size: 1rem;
             border: none;
             border-radius: 5px;
-            background-color: #A9AF33;
+            background-color: #264533;
             color: white;
             cursor: pointer;
         }
 
         .btn-login:hover {
-            background-color: #788728;
+            background-color: #f0f0f0;
         }
 
         .forgot-password {
             display: block;
             text-align: center;
             margin-top: 10px;
-            color: #A9AF33;
+            color: #264533;
             text-decoration: none;
         }
 
