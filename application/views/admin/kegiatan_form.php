@@ -3,8 +3,8 @@
     <div class="alert alert-success" role="alert">
        <i class="fas fa-fw fa-tachometer-alt"></i>Form Input Kegiatan
     </div>
-
-    <form method="post" action="<?php echo base_url('admin/kegiatan/input_aksi') ?>">
+    
+    <form method="post" action="<?php echo base_url('admin/kegiatan/input_aksi') ?>" enctype="multipart/form-data">
         <div class="form-group">
             <label>Nama kegiatan</label>
             <input type="text" name="nama_kegiatan" placeholder="Masukkan Nama kegiatan" class="form-control">

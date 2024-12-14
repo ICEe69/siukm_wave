@@ -16,7 +16,7 @@
             <label>Judul Informasi</label>
                 <select name="nama_kegiatan" class="form-control">
                     <option value="<?php echo $inf->nama_kegiatan ?>"><?php echo $inf->nama_kegiatan ?></option>
-                    <?php foreach($jabatan as $kgt): ?>
+                    <?php foreach($kegiatan as $kgt): ?>
                     <option value="<?php echo $kgt->nama_kegiatan ?>"><?php echo $kgt->nama_kegiatan ?></option>
                     <?php endforeach; ?>
                 </select>
@@ -25,7 +25,7 @@
             <label>Isi Informasi</label>
                 <select name="deskripsi" class="form-control">
                     <option value="<?php echo $inf->deskripsi ?>"><?php echo $inf->deskripsi ?></option>
-                    <?php foreach($jabatan as $kgt): ?>
+                    <?php foreach($kegiatan as $kgt): ?>
                     <option value="<?php echo $kgt->deskripsi ?>"><?php echo $kgt->deskripsi ?></option>
                     <?php endforeach; ?>
                 </select>

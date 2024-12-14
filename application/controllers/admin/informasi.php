@@ -92,10 +92,9 @@ class Informasi extends CI_Controller{
             'hak_akses'         => $data->hak_akses,
             'informasi'         => $this->informasi_model->tampil_data()->result()
         );
-        $where = array('id_informasi' => $id);
         $data['kegiatan'] = $this->kegiatan_model->tampil_data()->result();
+        $where = array('id_informasi' => $id);
         $data['informasi'] = $this->informasi_model->edit_data($where,'informasi')->result(); 
-
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/informasi_update',$data);

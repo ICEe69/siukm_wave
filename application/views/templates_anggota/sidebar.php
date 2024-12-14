@@ -37,7 +37,6 @@
                         <h6 class="collapse-header">Sub-Menu Event :</h6>
                         <a class="collapse-item" href="<?php echo base_url('anggota/kehadiran') ?>">Data Absensi</a>
                         <a class="collapse-item" href="<?php echo base_url('anggota/kegiatan') ?>">Data Kegiatan</a>
-                        <a class="collapse-item" href="<?php echo base_url('anggota/keuangan') ?>">Data Keuangan</a>
                     </div>
                 </div>
             </li>
