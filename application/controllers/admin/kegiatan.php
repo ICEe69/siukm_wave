@@ -171,6 +171,10 @@ class Kegiatan extends CI_Controller{
             // Gunakan foto lama jika tidak ada yang diupload
             $poster = $this->input->post('existing_poster');
         }
+        if (empty($tanggal_kegiatan)) {
+            $existing_data = $this->kegiatan_model->edit_data(['id_kegiatan' => $id], 'kegiatan')->row();
+            $tanggal_kegiatan = $existing_data->tanggal_kegiatan;
+        }
 
         $data = array(
             'nama_kegiatan'         => $nama_kegiatan,

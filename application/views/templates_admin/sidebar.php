@@ -11,7 +11,7 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-cubes"></i>
                 </div>
-                <div class="sidebar-brand-text mx-1">SIUKM WAVE<sup></sup></div>
+                <div class="sidebar-brand-text mx-1">SIUKM<sup></sup></div>
             </a>
 
             <!-- Divider -->
