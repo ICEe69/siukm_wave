@@ -5,6 +5,7 @@ class Welcome extends CI_Controller{
 
     public function index()
     {
+
         $data['identitas'] = $this->identitas_model->tampil_data('identitas')->result();
         $data['tentang_ukm'] = $this->tentangukm_model->tampil_data('tentang_ukm')->result();
         $data['informasi'] = $this->informasi_model->tampil_data('informasi')->result();
@@ -14,6 +15,7 @@ class Welcome extends CI_Controller{
         $data['sekretaris'] = $this->anggota_model->get_jabatan('Sekretaris');
         $data['bendahara'] = $this->anggota_model->get_jabatan('Bendahara');
         $data['humas'] = $this->anggota_model->get_jabatan('Humas');
+        $data['galeri'] = $this->galeri_model->tampil_data('galeru')->result();
 
         $this->load->view('templates_admin/header');
         $this->load->view('landing_page',$data);

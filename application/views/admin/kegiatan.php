@@ -22,7 +22,7 @@
                     <th class="text-center">STATUS</th>
                     <th class="text-center">DESKRIPSI</th>
                     <th class="text-center">POSTER</th>
-                    <th colspan="3" class="text-center">AKSI</th>
+                    <th colspan="2" class="text-center">AKSI</th>
                 </tr>
             </thead>
             <tbody>

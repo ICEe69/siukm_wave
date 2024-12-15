@@ -207,64 +207,64 @@
   <div class="row justify-content-center g-4">
     <!-- Kolom kiri -->
     <div class="col-md-6">
-      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh; background-color:#4A2B29;">
+      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh; background-color: #264533;">
         <div class="card-body">
           <span class="display-2 d-block mb-3" style="color:white;">
             <i class="<?php echo $informasi[0]->icon ?>"></i>
           </span>
-          <h5 class="card-title badge bg-info text-white py-2 px-3">
+          <h5 class="card-title badge bg-light py-2 px-3">
             <?php echo $informasi[0]->nama_kegiatan ?>
           </h5>
-          <p class="card-text mt-3">
+          <p class="card-text mt-3" style="color: white">
             <?php echo $informasi[0]->deskripsi ?>
           </p>
-          <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+          <a href="#" class="btn mt-3" style="background-color: #F8BA2B; color:white">Go somewhere</a>
         </div>
       </div>
-      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh;">
+      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh; background-color: #264533;" >
         <div class="card-body">
-          <span class="display-2 text-info d-block mb-3">
+          <span class="display-2 d-block mb-3" style="color:white;">
             <i class="<?php echo $informasi[1]->icon ?>"></i>
           </span>
-          <h5 class="card-title badge bg-info text-white py-2 px-3">
+          <h5 class="card-title badge bg-light py-2 px-3">
             <?php echo $informasi[1]->nama_kegiatan ?>
           </h5>
-          <p class="card-text mt-3">
+          <p class="card-text mt-3" style="color: white">
             <?php echo $informasi[1]->deskripsi ?>
           </p>
-          <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+          <a href="#" class="btn mt-3" style="background-color: #F8BA2B; color:white">Go somewhere</a>
         </div>
       </div>
     </div>
 
     <!-- Kolom kanan -->
     <div class="col-md-6">
-      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh;">
+      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh; background-color: #264533;">
         <div class="card-body">
-          <span class="display-2 text-info d-block mb-3">
+          <span class="display-2 d-block mb-3" style="color:white;">
             <i class="<?php echo $informasi[2]->icon ?>"></i>
           </span>
-          <h5 class="card-title badge bg-info text-white py-2 px-3">
+          <h5 class="card-title badge bg-light py-2 px-3">
             <?php echo $informasi[2]->nama_kegiatan ?>
           </h5>
-          <p class="card-text mt-3">
+          <p class="card-text mt-3" style="color: white">
             <?php echo $informasi[2]->deskripsi ?>
           </p>
-          <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+          <a href="#" class="btn mt-3" style="background-color: #F8BA2B; color:white">Go somewhere</a>
         </div>
       </div>
-      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh;">
+      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh; background-color: #264533;">
         <div class="card-body">
-          <span class="display-2 text-info d-block mb-3">
+          <span class="display-2 d-block mb-3" style="color:white;">
             <i class="<?php echo $informasi[3]->icon ?>"></i>
           </span>
-          <h5 class="card-title badge bg-info text-white py-2 px-3">
+          <h5 class="card-title badge bg-light py-2 px-3">
             <?php echo $informasi[3]->nama_kegiatan ?>
           </h5>
-          <p class="card-text mt-3">
+          <p class="card-text mt-3" style="color: white">
             <?php echo $informasi[3]->deskripsi ?>
           </p>
-          <a href="#" class="btn btn-primary mt-3">Go somewhere</a>
+          <a href="#" class="btn mt-3" style="background-color: #F8BA2B; color:white">Go somewhere</a>
         </div>
       </div>
     </div>
@@ -276,41 +276,54 @@
   <div id="galeriukm" class="card-header" style="background-color: #264533;">
     <strong style="color:white">GALERI</strong>
   </div>
-  <div class="card-body border rounded " style="background-color: white";>
-    <div class="card mb-4" style="width: 95%; margin: 0 auto; overflow: hidden;">
-      <!-- Gambar dengan ukuran yang lebih besar, melebar ke kiri dan kanan -->
-      <img class="card-img-top" src="<?php echo base_url('assets/img/gallery7.jpeg') ?>" alt="Card image cap" style="width: 110%; margin-left: -5%; margin-right: -5%; height: 50vh; object-fit:cover;">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  <div class="card-body border rounded" style="background-color: white;">
+    <!-- Menampilkan gambar utama dengan index 0 -->
+    <?php if (!empty($galeri)) : ?>
+      <div class="card mb-4" style="width: 95%; margin: 0 auto; overflow: hidden;">
+        <img src="<?php echo base_url('assets/galeri/' . $galeri[0]->galeri) ?>" style="width: 110%; margin-left: -5%; margin-right: -5%; height: 50vh; object-fit:cover;" >
+        <?php var_dump($galeri[0]->galeri); ?>
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $galeri[0]->nama_kegiatan ?></h5>
+          <p class="card-text"><?php echo $galeri[0]->deskripsi ?></p>
+        </div>
       </div>
-    </div>
-    
+    <?php endif; ?>
+
+    <!-- Menampilkan gambar lainnya dalam card-deck -->
     <div class="card-deck m-4">
-      <div class="card">
-        <img class="card-img-top" src="<?php echo base_url('assets/img/gallery7.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <?php if (isset($galeri[1])) : ?>
+        <div class="card">
+          <img src="<?php echo base_url('assets/galeri/' . $galeri[1]->galeri) ?>" style="height: 40vh; object-fit:cover;" >
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $galeri[1]->nama_kegiatan ?></h5>
+            <p class="card-text"><?php echo $galeri[1]->deskripsi ?></p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="<?php echo base_url('assets/img/gallery3.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <?php endif; ?>
+      
+      <?php if (isset($galeri[2])) : ?>
+        <div class="card">
+          <img src="<?php echo base_url('assets/galeri/' . $galeri[2]->galeri) ?>" style="height: 40vh; object-fit:cover;" >
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $galeri[2]->nama_kegiatan ?></h5>
+            <p class="card-text"><?php echo $galeri[2]->deskripsi ?></p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="<?php echo base_url('assets/img/gallery5.jpeg')?>" alt="Card image cap" style="height: 40vh; object-fit:cover;">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <?php endif; ?>
+      
+      <?php if (isset($galeri[3])) : ?>
+        <div class="card">
+          <img src="<?php echo base_url('assets/galeri/' . $galeri[3]->galeri) ?>" style="height: 40vh; object-fit:cover;" >
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $galeri[3]->nama_kegiatan ?></h5>
+            <p class="card-text"><?php echo $galeri[3]->deskripsi ?></p>
+          </div>
         </div>
-      </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>
+
 
 
 <form id="kontakukm" method="post" action="<?php echo base_url('welcome/kirim_pesan') ?>" class="p-4 m-5 border rounded shadow-sm">

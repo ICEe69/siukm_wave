@@ -57,21 +57,6 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities1"
-                    aria-expanded="true" aria-controls="collapseUtilities1">
-                    <i class="fas fa-fw fa-file"></i>
-                    <span>Laporan</span>
-                </a>
-                <div id="collapseUtilities1" class="collapse" aria-labelledby="headingUtilities1"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sub-Menu Laporan :</h6>
-                        <a class="collapse-item" href="<?php echo base_url('admin/laporan_kehadiran') ?>">Laporan Absensi</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -86,6 +71,7 @@
                         <a class="collapse-item" href="<?php echo base_url('admin/identitas') ?>">Identitas</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/informasi') ?>">Informasi UKM</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/tentang_ukm') ?>">Tentang UKM</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/galeri') ?>">Galeri</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/hubungi') ?>">Pesan</a>
                     </div>
                 </div>

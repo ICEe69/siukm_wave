@@ -29,12 +29,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-calendar-week"></i>
-                    <span>Event</span>
+                    <span>Aktivitas</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sub-Menu Event :</h6>
+                        <a class="collapse-item" href="<?php echo base_url('anggota/anggota') ?>">Anggota</a>
                         <a class="collapse-item" href="<?php echo base_url('anggota/kehadiran') ?>">Absensi</a>
                         <a class="collapse-item" href="<?php echo base_url('anggota/kegiatan') ?>">Kegiatan</a>
                     </div>

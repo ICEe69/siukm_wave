@@ -19,5 +19,11 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url() ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/css/dataTables.dataTables.min.css" rel="stylesheet">
+
+    <script src="<?php echo base_url('assets/js/jquery-3.7.1.js')?>"></script>
+    <script src="<?php echo base_url('assets/js/dataTables.min.js')?>"></script>
+
+
 
 </head>
