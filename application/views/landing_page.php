@@ -281,7 +281,6 @@
     <?php if (!empty($galeri)) : ?>
       <div class="card mb-4" style="width: 95%; margin: 0 auto; overflow: hidden;">
         <img src="<?php echo base_url('assets/galeri/' . $galeri[0]->galeri) ?>" style="width: 110%; margin-left: -5%; margin-right: -5%; height: 50vh; object-fit:cover;" >
-        <?php var_dump($galeri[0]->galeri); ?>
         <div class="card-body">
           <h5 class="card-title"><?php echo $galeri[0]->nama_kegiatan ?></h5>
           <p class="card-text"><?php echo $galeri[0]->deskripsi ?></p>
