@@ -1,13 +1,13 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-dark role="alert">
-       <i class="fas fa-fw fa-user-check" style="margin-right: 5px;"></i>Kehadiran
-</div>
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-user-check" style="margin-right: 5px;"></i><strong>KEHADIRAN</strong>
+    </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
 
 <div class="card mb-3">
-    <div class="card-header text-white" style="background-color: #788728;">
+    <div class="card-header text-white" style="background-color: #441752;">
         Filter Data Kehadiran Anggota
     </div>
         <div class="card-body">
@@ -97,13 +97,13 @@
                 ?>
                 
                 <button type="submit" style="background-color: #F8BA2B; color:white;" class="btn mb-2 ml-auto"><i class="fas fa-eye"></i>Tampilkan Data</button>
-                <a href="<?php echo base_url('admin/kehadiran/input') ?>" class="btn mb-2 ml-2" style="background-color:#43C5C5; color:white;"><i class="fas fa-plus"></i>Input Kehadiran</a>
+                <a href="<?php echo base_url('admin/kehadiran/input') ?>" class="btn mb-2 ml-2" style="background-color: #d46059; color:white;"><i class="fas fa-plus"></i>Input Kehadiran</a>
                 
                 <?php if(count($kehadiran) > 0) { ?>
-                    <a href="<?php echo base_url('admin/kehadiran/cetak_laporankehadiran?tanggal=' . $tanggal . '&bulan=' . $bulan . '&tahun=' . $tahun);?>" class="btn btn-success mb-2 ml-2"><i class="fas fa-print"></i> Cetak Data Kehadiran</a>
+                    <a href="<?php echo base_url('admin/kehadiran/cetak_laporankehadiran?tanggal=' . $tanggal . '&bulan=' . $bulan . '&tahun=' . $tahun);?>" class="btn mb-2 ml-2" style="background-color: #802b5b; color:white; ;"><i class="fas fa-print"></i> Cetak Data Kehadiran</a>
 
                 <?php }else{ ?>
-                    <button type="button" style="background-color: #4A2B29; color:white;" class="btn btn-success mb-2 ml-2" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" style="background-color: #802b5b; color:white;" class="btn btn-success mb-2 ml-2" data-toggle="modal" data-target="#exampleModal">
                         <i class="fas fa-print"></i> Cetak Data Kehadiran
                     </button>
                 <?php } ?>

@@ -36,7 +36,7 @@
         }
 
         .login-left {
-            background-color: #264533;
+            background-color: #441752;
             color: white;
             padding: 50px;
             flex: 1;
@@ -81,7 +81,7 @@
             font-size: 1rem;
             border: none;
             border-radius: 5px;
-            background-color: #264533;
+            background-color: #f29f58;
             color: white;
             cursor: pointer;
         }
@@ -94,7 +94,7 @@
             display: block;
             text-align: center;
             margin-top: 10px;
-            color: #264533;
+            color: #ab4459;
             text-decoration: none;
         }
 

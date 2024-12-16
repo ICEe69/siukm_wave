@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
-    <div class="alert alert-success" role="alert">
-        <i class="fas fa-fw fa-tachometer-alt"></i> Form Update Jabatan
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-user-tie" style="margin-right: 5px;"></i><strong>FORM UPDATE JABATAN</strong>
     </div>
 
     <?php foreach ($jabatan as $jbt): ?>
@@ -17,7 +17,7 @@
                 <input type="text" name="deskripsi" class="form-control" value="<?php echo $jbt->deskripsi ?>" required>
             </div>
             
-            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="submit" class="btn" style="background-color: #f29f58; color: white; ">Simpan</button>
         </form>
 
     <?php endforeach; ?>

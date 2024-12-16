@@ -1,27 +1,27 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-dark" role="alert">
-       <i class="fas fa-fw fa-users" style="margin-right: 5px;"></i>anggota
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-users" style="margin-right: 5px;"></i><strong>ANGGOTA</strong>
     </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <?php echo anchor('admin/anggota/input','<button style="background-color: #F8BA2B; color:white; " class="btn btn-sm mb-3"><i class="fas fa-plus fa-sm"></i> Tambah anggota</button>') ?>
+    <?php echo anchor('admin/anggota/input','<button style="background-color: #F29f58; color: white; " class="btn btn-sm mb-3"><i class="fas fa-plus fa-sm"></i> Tambah anggota</button>') ?>
 
 
     <table id="tableanggota" class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
-        <td class="text-center">NO</td>
-        <td class="text-center">NIM</td>
-        <td class="text-center">NAMA ANGGOTA</td>
-        <td class="text-center">JENIS KELAMIN</td>
-        <td class="text-center">JABATAN</td>
-        <td class="text-center">TANGGAL MASUK</td>
-        <td class="text-center">STATUS</td>
-        <td class="text-center">PHOTO</td>
-        <td class="text-center">HAK AKSES</td>
-        <td class="text-center">AKSI</td>
+        <td class="text-center" style="background-color: #441752; color: white" >NO</td>
+        <td class="text-center" style="background-color: #441752; color: white">NIM</td>
+        <td class="text-center" style="background-color: #441752; color: white">NAMA ANGGOTA</td>
+        <td class="text-center" style="background-color: #441752; color: white">JENIS KELAMIN</td>
+        <td class="text-center" style="background-color: #441752; color: white">JABATAN</td>
+        <td class="text-center" style="background-color: #441752; color: white">TANGGAL MASUK</td>
+        <td class="text-center" style="background-color: #441752; color: white">STATUS</td>
+        <td class="text-center" style="background-color: #441752; color: white">PHOTO</td>
+        <td class="text-center" style="background-color: #441752; color: white">HAK AKSES</td>
+        <td class="text-center" style="background-color: #441752; color: white">AKSI</td>
         </tr>
     </thead>
     
@@ -43,8 +43,8 @@
         <?php }else{ ?>
             <td>Anggota</td>
         <?php } ?>
-        <td ><?php echo anchor('admin/anggota/update/' .$agt->id_anggota,'<div class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></div>') ?>
-        <?php echo anchor('admin/anggota/delete/' .$agt->id_anggota,'<div class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></div>') ?></td>
+        <td ><?php echo anchor('admin/anggota/update/' .$agt->id_anggota,'<div class="btn btn-sm" style="background-color: #E87A5F; color: white; " ><i class="fa fa-edit"></i></div>') ?>
+        <?php echo anchor('admin/anggota/delete/' .$agt->id_anggota,'<div class="btn btn-sm" style="background-color: #AB4459 ; color: white; "><i class="fa fa-trash"></i></div>') ?></td>
     </tr>
     <?php } ?>
     </tbody>

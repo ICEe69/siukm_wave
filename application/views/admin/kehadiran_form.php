@@ -1,13 +1,13 @@
 <div class="container-fluid">
 
-    <div class="alert alert-dark" role="alert">
-       <i class="fas fa-fw fa-user-check" style="margin-right: 5px;"></i>Kehadiran
-</div>
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-user-check" style="margin-right: 5px;"></i><strong>FORM INPUT KEHADIRAN</strong>
+    </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
 
 <div class="card mb-3">
-    <div class="card-header text-white" style="background-color: #264533">
+    <div class="card-header text-white" style="background-color: #441752">
         Filter Data Kehadiran Anggota
     </div>
         <div class="card-body">
@@ -83,7 +83,7 @@
             </div>
                 
                 <br>
-                <button type="submit" class="btn mb-2" style="background-color: #F8BA2B; color:white;"><i class="fas fa-eye"></i>Generate</button>
+                <button type="submit" class="btn mb-2" style="background-color: #d46059; color:white;"><i class="fas fa-eye"></i>Generate</button>
             </form>
         </div>
     </div>
@@ -111,17 +111,17 @@
     $jml_data = count($input);
     if($jml_data > 0) { ?>
     <form method="POST">
-    <button class="btn mb-3" type="submit" name="submit" value="submit" style="background-color: #788728; color:white;">Simpan</button>
+    <button class="btn mb-3" type="submit" name="submit" value="submit" style="background-color: #f29f58; color:white;">Simpan</button>
         <table class="table table-striped table-bordered table-hover">
         <tr>
-            <td class="text-center">NO</td>
-            <td class="text-center">NIM</td>
-            <td class="text-center">NAMA ANGGOTA</td>
-            <td class="text-center">JENIS KELAMIN</td>
-            <td class="text-center">JABATAN</td>
-            <td class="text-center" width="8%">HADIR</td>
-            <td class="text-center" width="8%">SAKIT</td>
-            <td class="text-center" width="8%">ALPHA</td>
+            <td class="text-center" style="background-color: #441752; color: white">NO</td>
+            <td class="text-center" style="background-color: #441752; color: white">NIM</td>
+            <td class="text-center" style="background-color: #441752; color: white">NAMA ANGGOTA</td>
+            <td class="text-center" style="background-color: #441752; color: white">JENIS KELAMIN</td>
+            <td class="text-center" style="background-color: #441752; color: white">JABATAN</td>
+            <td class="text-center" width="8%" style="background-color: #441752; color: white">HADIR</td>
+            <td class="text-center" width="8%" style="background-color: #441752; color: white">SAKIT</td>
+            <td class="text-center" width="8%" style="background-color: #441752; color: white">ALPHA</td>
         </tr>
 
         <?php

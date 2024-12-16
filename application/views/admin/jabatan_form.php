@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
-    <div class="alert alert-success" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt"></i>Form Input Jabatan
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-user-tie" style="margin-right: 5px;"></i><strong>FORM INPUT JABATAN</strong>
     </div>
 
     <form method="post" action="<?php echo base_url('admin/jabatan/input_aksi') ?>">
@@ -16,6 +16,6 @@
             <?php echo form_error('deskripsi','<div class="text-danger small" ml-3>')?>
         </div>
         
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="btn" style="background-color: #f29f58; color: white; " >Simpan</button>
     </form>
 </div>

@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #264533; position: fixed; top: 0; width: 100%; z-index: 1030;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1B1833; position: fixed; top: 0; width: 100%; z-index: 1030;">
   <?php foreach($identitas as $id) : ?>
-  <a class="navbar-brand" style="color: white;"><strong><?php echo $id->nama_website ?></strong></a>
+  <a class="navbar-brand" style="color: white;"><i class="fas fa-fw fa-cubes" style="margin-right: 5px;"></i><strong><?php echo $id->nama_website ?></strong></a>
   <?php endforeach; ?>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -32,13 +32,13 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="<?php echo base_url('assets/img/slider1.jpg') ?>" alt="First slide">
+        <img class="d-block w-100" src="<?php echo base_url('assets/img/slider1.png') ?>" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="<?php echo base_url('assets/img/slider2.jpg') ?>" alt="Second slide">
+        <img class="d-block w-100" src="<?php echo base_url('assets/img/slider2.png') ?>" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="<?php echo base_url('assets/img/slider3.jpg') ?>" alt="Third slide">
+        <img class="d-block w-100" src="<?php echo base_url('assets/img/slider3.png') ?>" alt="Third slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -54,7 +54,7 @@
 
 
 <div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
-  <div class="card-header" style="background-color: #264533;">
+  <div class="card-header" style="background-color: #441752;">
     <strong style="color: white;">TENTANG UKM</strong>
   </div>
   <div class="card-body">
@@ -64,7 +64,7 @@
     <?php endforeach; ?>
     </p>
     <!-- Button trigger modal -->
-    <button type="button" class="btn" style="background-color: #F8BA2B; color:white" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn" style="background-color: #F29F58; color:white" data-toggle="modal" data-target="#exampleModal">
       Selengkapnya...
     </button>
   </div>
@@ -103,7 +103,7 @@
 </div>
 
 <div id="infoukm" class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)";>
-  <div class="card-header" style="background-color:#264533">
+  <div class="card-header" style="background-color: #ab4459">
     <strong style="color:white">STRUKTUR JABATAN UKM</strong>
   </div>
   <div class="card-body" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 2%;">
@@ -207,7 +207,7 @@
   <div class="row justify-content-center g-4">
     <!-- Kolom kiri -->
     <div class="col-md-6">
-      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh; background-color: #264533;">
+      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh; background-color: #441752;">
         <div class="card-body">
           <span class="display-2 d-block mb-3" style="color:white;">
             <i class="<?php echo $informasi[0]->icon ?>"></i>
@@ -218,10 +218,10 @@
           <p class="card-text mt-3" style="color: white">
             <?php echo $informasi[0]->deskripsi ?>
           </p>
-          <a href="#" class="btn mt-3" style="background-color: #F8BA2B; color:white">Go somewhere</a>
+          <a href="<?php echo base_url('login') ?>" class="btn mt-3" style="background-color: #f29f58; color:white">Go somewhere</a>
         </div>
       </div>
-      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh; background-color: #264533;" >
+      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh; background-color: #56194f;" >
         <div class="card-body">
           <span class="display-2 d-block mb-3" style="color:white;">
             <i class="<?php echo $informasi[1]->icon ?>"></i>
@@ -232,14 +232,14 @@
           <p class="card-text mt-3" style="color: white">
             <?php echo $informasi[1]->deskripsi ?>
           </p>
-          <a href="#" class="btn mt-3" style="background-color: #F8BA2B; color:white">Go somewhere</a>
+          <a href="#" class="btn mt-3" style="background-color: #f29f58; color:white">Go somewhere</a>
         </div>
       </div>
     </div>
 
     <!-- Kolom kanan -->
     <div class="col-md-6">
-      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px; height: 55vh; background-color: #264533;">
+      <div class="card border-0 shadow-sm text-center mb-4" style="border-radius: 10px solid #000; height: 55vh; background-color: #802b5b;">
         <div class="card-body">
           <span class="display-2 d-block mb-3" style="color:white;">
             <i class="<?php echo $informasi[2]->icon ?>"></i>
@@ -250,10 +250,10 @@
           <p class="card-text mt-3" style="color: white">
             <?php echo $informasi[2]->deskripsi ?>
           </p>
-          <a href="#" class="btn mt-3" style="background-color: #F8BA2B; color:white">Go somewhere</a>
+          <a href="#" class="btn mt-3" style="background-color: #f29f58; color:white">Go somewhere</a>
         </div>
       </div>
-      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh; background-color: #264533;">
+      <div class="card border-0 shadow-sm text-center" style="border-radius: 10px; height: 55vh; background-color: #aa405b;">
         <div class="card-body">
           <span class="display-2 d-block mb-3" style="color:white;">
             <i class="<?php echo $informasi[3]->icon ?>"></i>
@@ -264,7 +264,7 @@
           <p class="card-text mt-3" style="color: white">
             <?php echo $informasi[3]->deskripsi ?>
           </p>
-          <a href="#" class="btn mt-3" style="background-color: #F8BA2B; color:white">Go somewhere</a>
+          <a href="#" class="btn mt-3" style="background-color: #f29f58; color:white">Go somewhere</a>
         </div>
       </div>
     </div>
@@ -273,7 +273,7 @@
 
 
 <div class="card text-center m-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-  <div id="galeriukm" class="card-header" style="background-color: #264533;">
+  <div id="galeriukm" class="card-header" style="background-color: #802b5b;">
     <strong style="color:white">GALERI</strong>
   </div>
   <div class="card-body border rounded" style="background-color: white;">
@@ -327,7 +327,7 @@
 
 <form id="kontakukm" method="post" action="<?php echo base_url('welcome/kirim_pesan') ?>" class="p-4 m-5 border rounded shadow-sm">
 
-  <div class="alert d-flex align-items-center mb-4" style="background-color: #264533;">
+  <div class="alert d-flex align-items-center mb-4" style="background-color: #d46059;">
       <i style="color: white; margin-right:1vh" class="fas fa-envelope-open-text me-2"></i>
       <strong style="margin-right: 20px; color:white">Hubungi Kami</strong>
       <span style="color:white" class="small"><?php echo $id->alamat ?> - <?php echo $id->email ?> - <?php echo $id->telp ?></span>
@@ -353,7 +353,7 @@
   </div>
 
   <div class="text-end">
-    <button type="submit" class="btn" style="background-color: #F8BA2B; color:white">Kirim Pesan</button>
+    <button type="submit" class="btn" style="background-color: #f29f58; color:white">Kirim Pesan</button>
   </div>
 
 </form>
