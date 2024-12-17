@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
-    <div class="alert alert-success" role="alert">
-        <i class="fas fa-fw fa-tachometer-alt"></i> Form Update identitas
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-pen" style="margin-right: 5px;"></i><strong>FORM UPDATE IDENTITAS</strong>
     </div>
 
     <?php foreach ($identitas as $id): ?>
@@ -24,7 +24,7 @@
                 <label>No. Telpon</label>
                 <input type="text" name="telp" class="form-control" value="<?php echo $id->telp ?>" required>
             </div>
-            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="submit" class="btn" style="background-color: #f29f58; color: white; ">Simpan</button>
         </form>
 
     <?php endforeach; ?>

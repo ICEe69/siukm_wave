@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-success" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt"></i>Form Input Kegiatan
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-file-alt" style="margin-right: 5px;"></i><strong>FORM INPUT KEGIATAN</strong>
     </div>
     
     <form method="post" action="<?php echo base_url('admin/kegiatan/input_aksi') ?>" enctype="multipart/form-data">
@@ -55,6 +55,6 @@
             <?php echo form_error('poster','<div class="text-danger small" ml-3>')?>
         </div>
         
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="btn" style="background-color: #f29f58; color: white; ">Simpan</button>
     </form>
 </div>

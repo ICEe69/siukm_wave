@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-dark" role="alert">
-       <i class="fas fa-fw fa-users" style="margin-right: 5px;"></i>anggota
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-users" style="margin-right: 5px;"></i><strong>ANGGOTA</strong>
     </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
@@ -9,15 +9,15 @@
     <table id="tableanggota" class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
-        <td class="text-center">NO</td>
-        <td class="text-center">NIM</td>
-        <td class="text-center">NAMA ANGGOTA</td>
-        <td class="text-center">JENIS KELAMIN</td>
-        <td class="text-center">JABATAN</td>
-        <td class="text-center">TANGGAL MASUK</td>
-        <td class="text-center">STATUS</td>
-        <td class="text-center">PHOTO</td>
-        <td class="text-center">HAK AKSES</td>
+        <td class="text-center" style="background-color: #441752; color: white">NO</td>
+        <td class="text-center" style="background-color: #441752; color: white">NIM</td>
+        <td class="text-center" style="background-color: #441752; color: white">NAMA ANGGOTA</td>
+        <td class="text-center" style="background-color: #441752; color: white">JENIS KELAMIN</td>
+        <td class="text-center" style="background-color: #441752; color: white">JABATAN</td>
+        <td class="text-center" style="background-color: #441752; color: white">TANGGAL MASUK</td>
+        <td class="text-center" style="background-color: #441752; color: white">STATUS</td>
+        <td class="text-center" style="background-color: #441752; color: white">PHOTO</td>
+        <td class="text-center" style="background-color: #441752; color: white"">HAK AKSES</td>
         </tr>
     </thead>
     

@@ -11,7 +11,7 @@
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-cubes"></i>
                 </div>
-                <div class="sidebar-brand-text mx-1">SIUKM UMRAH<sup></sup></div>
+                <div class="sidebar-brand-text mx-1">SIUKM ALTERRA<sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -29,11 +29,11 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-database"></i>
-                    <span>Wave</span>
+                    <span>Alterra</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Sub-Menu Wave:</h6>
+                        <h6 class="collapse-header">Sub-Menu Alterra:</h6>
                         <a class="collapse-item" href="<?php echo base_url('admin/anggota')?>">Data Anggota</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/jabatan')?>">Data Jabatan</a>
                     </div>

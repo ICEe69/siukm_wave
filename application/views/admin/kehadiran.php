@@ -96,7 +96,7 @@
                     }
                 ?>
                 
-                <button type="submit" style="background-color: #F8BA2B; color:white;" class="btn mb-2 ml-auto"><i class="fas fa-eye"></i>Tampilkan Data</button>
+                <button type="submit" style="background-color: #f29f58; color:white;" class="btn mb-2 ml-auto"><i class="fas fa-eye"></i>Tampilkan Data</button>
                 <a href="<?php echo base_url('admin/kehadiran/input') ?>" class="btn mb-2 ml-2" style="background-color: #d46059; color:white;"><i class="fas fa-plus"></i>Input Kehadiran</a>
                 
                 <?php if(count($kehadiran) > 0) { ?>
@@ -138,14 +138,14 @@
     <div>
         <table class="table table-striped table-bordered table-hover">
         <tr>
-            <th>NO</th>
-            <th>NIM</th>
-            <th>NAMA ANGGOTA</th>
-            <th>JENIS KELAMIN</th>
-            <th>NAMA JABATAN</th>
-            <th>HADIR</th>
-            <th>SAKIT</th>
-            <th>ALPHA</th>
+            <th class="text-center" style="background-color: #441752; color: white">NO</th>
+            <th class="text-center" style="background-color: #441752; color: white">NIM</th>
+            <th class="text-center" style="background-color: #441752; color: white">NAMA ANGGOTA</th>
+            <th class="text-center" style="background-color: #441752; color: white">JENIS KELAMIN</th>
+            <th class="text-center" style="background-color: #441752; color: white">NAMA JABATAN</th>
+            <th class="text-center" style="background-color: #441752; color: white">HADIR</th>
+            <th class="text-center" style="background-color: #441752; color: white">SAKIT</th>
+            <th class="text-center" style="background-color: #441752; color: white">ALPHA</th>
         </tr>
 
         <?php

@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-success" role="alert">
-        <i class="fas fa-fw fa-tachometer-alt"></i> Form Update galeri
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-info" style="margin-right: 5px;"></i><strong>FORM UPDATE GALERI</strong>
     </div>
 
     <?php foreach ($galeri as $gr): ?>

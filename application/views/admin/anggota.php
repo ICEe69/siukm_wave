@@ -43,7 +43,7 @@
         <?php }else{ ?>
             <td>Anggota</td>
         <?php } ?>
-        <td ><?php echo anchor('admin/anggota/update/' .$agt->id_anggota,'<div class="btn btn-sm" style="background-color: #E87A5F; color: white; " ><i class="fa fa-edit"></i></div>') ?>
+        <td ><?php echo anchor('admin/anggota/update/' .$agt->id_anggota,'<div class="btn btn-sm" style="background-color: #E87A5F; color: white;" ><i class="fa fa-edit"></i></div>') ?>
         <?php echo anchor('admin/anggota/delete/' .$agt->id_anggota,'<div class="btn btn-sm" style="background-color: #AB4459 ; color: white; "><i class="fa fa-trash"></i></div>') ?></td>
     </tr>
     <?php } ?>

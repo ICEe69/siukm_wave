@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-success" role="alert">
-        <i class="fas fa-fw fa-tachometer-alt"></i> Form Update kegiatan
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-pen" style="margin-right: 5px;"></i><strong>FORM UPDATE KEGIATAN</strong>
     </div>
 
     <?php foreach ($kegiatan as $kgt): ?>
@@ -51,7 +51,7 @@
                 <input type="hidden" name="existing_poster" value="<?php echo $kgt->poster; ?>">
             </div>
 
-            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="submit" class="btn" style="background-color: #f29f58; color: white;">Simpan</button>
         </form>
 
     <?php endforeach; ?>

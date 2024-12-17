@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-bottom: 100px; height: 100vh; overflow-y: auto;">
 
-    <div class="alert alert-dark" role="alert">
-        <i class="fas fa-fw fa-file-alt" style="margin-right: 5px;"></i> Kegiatan
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-file-alt" style="margin-right: 5px;"></i><strong>KEGIATAN</strong>
     </div>
 
     <?php foreach ($kegiatan as $kgt) : ?>

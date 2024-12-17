@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
-    <div class="alert alert-success" role="alert">
-        <i class="fas fa-fw fa-tachometer-alt"></i> Form Update Informasi
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-pen" style="margin-right: 5px;"></i><strong>FORM UPDATE INFORMASI</strong>
     </div>
 
     <?php foreach ($informasi as $inf): ?>
@@ -31,7 +31,7 @@
                 </select>
             </div>
             
-            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="submit" class="btn" style="background-color: #f29f58; color: white;">Simpan</button>
         </form>
 
     <?php endforeach; ?>

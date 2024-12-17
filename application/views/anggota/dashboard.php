@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-dark" role="alert">
-       <i class="fas fa-fw fa-tachometer-alt" style="margin-right: 5px;"></i>Dashboard
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-tachometer-alt" style="margin-right: 5px;"></i><strong>DASHBOARD</strong>
     </div>
 
     <div class="alert alert-dark" role="alert">
@@ -10,7 +10,7 @@
     </div>
 
     <div class="card mx-auto" style="margin-bottom: 120px">
-        <div class="card-header font-weight-bold text-white" style="background-color: #264533;">
+        <div class="card-header font-weight-bold text-white" style="background-color: #441752;">
             Data Anggota
         </div>
 

@@ -12,17 +12,17 @@
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th class="text-center">NO</th>
-                    <th class="text-center">NAMA KEGIATAN</th>
-                    <th class="text-center">TANGGAL KEGIATAN</th>
-                    <th class="text-center">LOKASI</th>
-                    <th class="text-center">PENYELENGGARA</th>
-                    <th class="text-center">KUOTA</th>
-                    <th class="text-center">LINK</th>
-                    <th class="text-center">STATUS</th>
-                    <th class="text-center">DESKRIPSI</th>
-                    <th class="text-center">POSTER</th>
-                    <th colspan="2" class="text-center">AKSI</th>
+                    <th class="text-center" style="background-color: #441752; color: white">NO</th>
+                    <th class="text-center" style="background-color: #441752; color: white">NAMA KEGIATAN</th>
+                    <th class="text-center" style="background-color: #441752; color: white">TANGGAL KEGIATAN</th>
+                    <th class="text-center" style="background-color: #441752; color: white">LOKASI</th>
+                    <th class="text-center" style="background-color: #441752; color: white">PENYELENGGARA</th>
+                    <th class="text-center" style="background-color: #441752; color: white">KUOTA</th>
+                    <th class="text-center" style="background-color: #441752; color: white">LINK</th>
+                    <th class="text-center" style="background-color: #441752; color: white">STATUS</th>
+                    <th class="text-center" style="background-color: #441752; color: white">DESKRIPSI</th>
+                    <th class="text-center" style="background-color: #441752; color: white">POSTER</th>
+                    <th colspan="2" class="text-center" style="background-color: #441752; color: white">AKSI</th>
                 </tr>
             </thead>
             <tbody>

@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
-    <div class="alert alert-success">
-        <i class="fas fa-comment-dots"></i> FORM BALAS PESAN USER
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-comment-dots" style="margin-right: 5px;"></i><strong>FORM BALAS PESAN USER</strong>
     </div>
 
     <?php foreach($hubungi as $hub): ?>
@@ -23,7 +23,7 @@
                 <textarea type="text" name="pesan" class="form-control" rows="5"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Kirim</button>
+            <button type="submit" class="btn" style="background-color: #E87A5F; color: white;">Kirim</button>
         </form>
 
     <?php endforeach; ?>

@@ -4,14 +4,14 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #264533;">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1b1833;">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html" >
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-cubes"></i>
                 </div>
-                <div class="sidebar-brand-text mx-1">SIUKM<sup></sup></div>
+                <div class="sidebar-brand-text mx-1">SIUKM ALTERRA<sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -43,7 +43,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('ubah_password') ?>">
+                <a class="nav-link" href="<?php echo base_url('anggota/ubah_password') ?>">
                     <i class="fas fa-lock"></i>
                     <span>Ubah Password</span></a>
             </li>

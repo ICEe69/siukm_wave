@@ -1,13 +1,13 @@
 <div class="container-fluid" style="margin-bottom: 100px;">
 
-    <div class="alert alert-dark" role="alert">
-       <i class="fas fa-fw fa-user-check" style="margin-right: 5px;"></i>Kehadiran
-</div>
+    <div class="alert alert-green-light" style="background-color: #Ab4459; color: white;" role="alert">
+       <i class="fas fa-fw fa-user-check" style="margin-right: 5px;"></i><strong>KEHADIRAN</strong>
+    </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
 
 <div class="card mb-3">
-    <div class="card-header text-white" style="background-color: #264533;">
+    <div class="card-header text-white" style="background-color: #441752;">
         Filter Data Kehadiran Anggota
     </div>
         <div class="card-body">
@@ -96,7 +96,7 @@
                     }
                 ?>
                 
-                <button type="submit" class="btn mb-2 ml-auto" style="background-color: #F5C437; color: white;"><i class="fas fa-eye"></i>Tampilkan Data</button>            
+                <button type="submit" class="btn mb-2 ml-auto" style="background-color: #f29f58; color: white;"><i class="fas fa-eye"></i>Tampilkan Data</button>            
             </form>
         </div>
     </div>
@@ -126,14 +126,14 @@
     <div>
         <table class="table table-striped table-bordered table-hover">
         <tr>
-            <th>NO</th>
-            <th>NIM</th>
-            <th>NAMA ANGGOTA</th>
-            <th>JENIS KELAMIN</th>
-            <th>NAMA JABATAN</th>
-            <th>HADIR</th>
-            <th>SAKIT</th>
-            <th>ALPHA</th>
+            <th class="text-center" style="background-color: #441752; color: white">NO</th>
+            <th class="text-center" style="background-color: #441752; color: white">NIM</th>
+            <th class="text-center" style="background-color: #441752; color: white">NAMA ANGGOTA</th>
+            <th class="text-center" style="background-color: #441752; color: white">JENIS KELAMIN</th>
+            <th class="text-center" style="background-color: #441752; color: white">NAMA JABATAN</th>
+            <th class="text-center" style="background-color: #441752; color: white">HADIR</th>
+            <th class="text-center" style="background-color: #441752; color: white">SAKIT</th>
+            <th class="text-center" style="background-color: #441752; color: white">ALPHA</th>
         </tr>
 
         <?php

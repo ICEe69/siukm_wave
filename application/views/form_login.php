@@ -81,7 +81,7 @@
             font-size: 1rem;
             border: none;
             border-radius: 5px;
-            background-color: #f29f58;
+            background-color: #441752;
             color: white;
             cursor: pointer;
         }
@@ -112,7 +112,7 @@
         <!-- Left Section -->
         <div class="login-left">
             <h1>Selamat Datang!</h1>
-            <p>Login untuk memulai perjalanan di SIUKM. Temukan kesempatan dan kembangkan diri.<br>Ayo Bergabung!</p>
+            <p>Login untuk memulai perjalanan di SIUKM ALTERRA. Temukan kesempatan dan kembangkan diri bersama kami.<br>Ayo Bergabung!</p>
         </div>
 
         <!-- Right Section -->
